@@ -5,6 +5,11 @@ VisualStudioVersion = 17.7.34018.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Controller-Code", "Controller-Code\Controller-Code.vcxproj", "{F93CD506-D455-4202-AAF0-8813E66C313E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Retro-Pie-Setup", "Retro-Pie-Setup", "{8F8DCC40-C1E7-4271-AA99-BB1E1A62544D}"
+	ProjectSection(SolutionItems) = preProject
+		Retro-Pie-Setup\misc retropie configuration setups.txt = Retro-Pie-Setup\misc retropie configuration setups.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
