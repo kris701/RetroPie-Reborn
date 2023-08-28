@@ -12,6 +12,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Retro-Pie-Setup", "Retro-Pi
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Backround-Runner", "Backround-Runner\Backround-Runner.pyproj", "{EDED5C9C-08A6-4C1C-B575-C9C097511F77}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EAGLE-Files", "EAGLE-Files", "{DFFDED86-EBC4-4560-ACB6-39D50B7F512F}"
+	ProjectSection(SolutionItems) = preProject
+		EAGLE-Files\DPad-Buttons.brd = EAGLE-Files\DPad-Buttons.brd
+		EAGLE-Files\DPad-Buttons.sch = EAGLE-Files\DPad-Buttons.sch
+		EAGLE-Files\eagle.epf = EAGLE-Files\eagle.epf
+		EAGLE-Files\Fan-Controller.brd = EAGLE-Files\Fan-Controller.brd
+		EAGLE-Files\Fan-Controller.sch = EAGLE-Files\Fan-Controller.sch
+		EAGLE-Files\Four-Buttons.brd = EAGLE-Files\Four-Buttons.brd
+		EAGLE-Files\Four-Buttons.sch = EAGLE-Files\Four-Buttons.sch
+		EAGLE-Files\Power-Bus.brd = EAGLE-Files\Power-Bus.brd
+		EAGLE-Files\Power-Bus.sch = EAGLE-Files\Power-Bus.sch
+		EAGLE-Files\Raspberry-Pi-Header.brd = EAGLE-Files\Raspberry-Pi-Header.brd
+		EAGLE-Files\Raspberry-Pi-Header.sch = EAGLE-Files\Raspberry-Pi-Header.sch
+		EAGLE-Files\Two-Buttons.brd = EAGLE-Files\Two-Buttons.brd
+		EAGLE-Files\Two-Buttons.sch = EAGLE-Files\Two-Buttons.sch
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
