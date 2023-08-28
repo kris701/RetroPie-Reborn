@@ -29,6 +29,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EAGLE-Files", "EAGLE-Files"
 		EAGLE-Files\Two-Buttons.sch = EAGLE-Files\Two-Buttons.sch
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Parts", "Parts", "{BD6E8678-4D22-46DF-9BAA-F7FAA22776CF}"
+	ProjectSection(SolutionItems) = preProject
+		Parts\readme.md = Parts\readme.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
