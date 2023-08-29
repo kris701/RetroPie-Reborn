@@ -114,6 +114,7 @@
 <hole x="36.83" y="3.81" drill="0.35"/>
 <hole x="36.83" y="6.35" drill="0.35"/>
 <hole x="36.83" y="8.89" drill="0.35"/>
+<hole x="8.89" y="7.62" drill="1.0668"/>
 </plain>
 <libraries>
 <library name="pinhead" urn="urn:adsk.eagle:library:325">
