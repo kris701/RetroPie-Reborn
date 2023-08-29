@@ -16,7 +16,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EAGLE-Files", "EAGLE-Files"
 	ProjectSection(SolutionItems) = preProject
 		EAGLE-Files\DPad-Buttons.brd = EAGLE-Files\DPad-Buttons.brd
 		EAGLE-Files\DPad-Buttons.sch = EAGLE-Files\DPad-Buttons.sch
-		EAGLE-Files\eagle.epf = EAGLE-Files\eagle.epf
 		EAGLE-Files\Fan-Controller.brd = EAGLE-Files\Fan-Controller.brd
 		EAGLE-Files\Fan-Controller.sch = EAGLE-Files\Fan-Controller.sch
 		EAGLE-Files\Four-Buttons.brd = EAGLE-Files\Four-Buttons.brd
