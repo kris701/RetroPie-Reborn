@@ -366,3 +366,5 @@ FodyWeavers.xsd
 *.gcode
 *.b#*
 *.s#*
+*.pro
+*.job
