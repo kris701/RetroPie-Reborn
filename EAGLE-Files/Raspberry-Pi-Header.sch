@@ -1291,20 +1291,20 @@
 <wire x1="99.06" y1="60.96" x2="71.12" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="60.96" x2="71.12" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="78.74" x2="33.02" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="78.74" x2="33.02" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="RASPBERRYPI4" gate="A" pin="7"/>
-<wire x1="33.02" y1="63.5" x2="45.72" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="RASPBERRYPI4" gate="A" pin="5"/>
+<wire x1="45.72" y1="66.04" x2="33.02" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="66.04" x2="33.02" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SDA" class="0">
 <segment>
-<pinref part="RASPBERRYPI4" gate="A" pin="5"/>
-<wire x1="45.72" y1="66.04" x2="35.56" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="66.04" x2="35.56" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="76.2" x2="68.58" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="68.58" y1="76.2" x2="68.58" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="JP1" gate="A" pin="3"/>
 <wire x1="68.58" y1="58.42" x2="99.06" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="RASPBERRYPI4" gate="A" pin="3"/>
+<wire x1="45.72" y1="68.58" x2="35.56" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="68.58" x2="35.56" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GPIO13" class="0">
