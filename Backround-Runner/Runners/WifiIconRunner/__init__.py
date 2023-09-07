@@ -12,11 +12,11 @@ class WifiIconRunner(BIR):
     _currentState : WI = WI.Disabled
 
     def Update(self, iconManager : IM) -> None:
-        checkState = self.GetWifiState()
+        checkState : WI = self.GetWifiState()
         if checkState != self._currentState:
             self._currentState = checkState
             iconManager.RemoveIcon(self.IconName);
-        iconManager.AddIcon(checkState, self.IconName)        
+            iconManager.AddIcon(checkState, self.IconName)        
     
     # From https://github.com/d-rez/gbz_overlay/blob/master/overlay.py#L107
     def GetWifiState(self) -> WI:
