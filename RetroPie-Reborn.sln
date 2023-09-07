@@ -33,6 +33,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Parts", "Parts", "{BD6E8678
 		Parts\readme.md = Parts\readme.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3D-Print-Files", "3D-Print-Files", "{28894E59-7BD6-4CAC-9A24-C4EFB3B62F37}"
+	ProjectSection(SolutionItems) = preProject
+		3D-Print-Files\InnerBracket.f3d = 3D-Print-Files\InnerBracket.f3d
+		3D-Print-Files\Shell.f3d = 3D-Print-Files\Shell.f3d
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bootscreens", "Bootscreens", "{42778C46-D25B-4C0C-865A-06A7C2FBABE6}"
+	ProjectSection(SolutionItems) = preProject
+		Bootscreens\bootscreen.aep = Bootscreens\bootscreen.aep
+		Bootscreens\bootscreen.mp4 = Bootscreens\bootscreen.mp4
+		Bootscreens\loading.png = Bootscreens\loading.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
