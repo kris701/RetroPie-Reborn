@@ -13,7 +13,7 @@ class BluetoothIconRunner(BIR):
     _currentState : BI = BI.Disabled
     
     def Update(self, iconManager : IM) -> None:
-        checkState : BI = self.GetWifiState()
+        checkState : BI = self.GetBluetoothState()
         if checkState != self._currentState:
             self._currentState = checkState
             iconManager.RemoveIcon(self.IconName);
