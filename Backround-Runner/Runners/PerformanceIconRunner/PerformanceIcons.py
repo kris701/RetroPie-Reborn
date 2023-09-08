@@ -1,14 +1,14 @@
 from ...IconManager import IconStorage as IS
 
 class PerformanceIcons(IS):
-    OK : "..."
-    UnderVoltage : "..."
-    UnderVoltageAndFreqCap : "..."
-    UnderVoltageAndThrottled : "..."
-    UnderVoltageAndFreqCapAndThrottled : "..."
-    FreqCap : "..."
-    FreqCapAndThrottled : "..."
-    Throttled : "..."
+    OK = "..."
+    UnderVoltage = "..."
+    UnderVoltageAndFreqCap = "..."
+    UnderVoltageAndThrottled = "..."
+    UnderVoltageAndFreqCapAndThrottled = "..."
+    FreqCap = "..."
+    FreqCapAndThrottled = "..."
+    Throttled = "..."
 
 def GetIconFromValue(value : int) -> PerformanceIcons:
 

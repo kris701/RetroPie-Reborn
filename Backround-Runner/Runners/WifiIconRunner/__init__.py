@@ -9,7 +9,7 @@ class WifiIconRunner(BIR):
         
     _wifiCarrier = "/sys/class/net/wlan0/carrier" # 1 when wifi connected, 0 when disconnected and/or ifdown
     _wifiLinkmode = "/sys/class/net/wlan0/link_mode" # 1 when ifup, 0 when ifdown
-    _currentState : WI = WI.Disabled
+    _currentState : WI = WI.Hide
 
     def Update(self, iconManager : IM) -> None:
         checkState : WI = self.GetWifiState()
@@ -20,7 +20,7 @@ class WifiIconRunner(BIR):
     
     # From https://github.com/d-rez/gbz_overlay/blob/master/overlay.py#L107
     def GetWifiState(self) -> WI:
-        new_wifi_state = WI.Disabled
+        new_wifi_state = WI.Hide
         try:
             f = open(self._wifiCarrier, "r")
             carrier_state = int(f.read().rstrip())
@@ -34,7 +34,7 @@ class WifiIconRunner(BIR):
                 f.close()
                 if linkmode_state == 1:
                     # ifup but not connected to any network
-                    new_wifi_state = WI.Enabled
+                    new_wifi_state = WI.Searching
                     # else - must be ifdown
       
         except IOError:

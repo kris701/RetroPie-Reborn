@@ -3,8 +3,7 @@ import subprocess
 from enum import Enum
 
 class IconStorage(Enum):
-    # Implement in each icon runner
-    pass
+    Hide = "None"
 
 class IconManager(object):
     PngviewPath : str = "/usr/local/bin/pngview"

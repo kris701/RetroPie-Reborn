@@ -10,14 +10,30 @@ class BatteryIconRunner(BIR):
     
     _chargeVoltage : float = 4.1
     _ChargevoltageMap : dict = {
-            0: BI.Battery10,
-            1: BI.Battery20,
-            # ...
+            0: BI.BatteryAlert,
+            1: BI.Battery10,
+            2: BI.Battery20,
+            3: BI.Battery30,
+            4: BI.Battery40,
+            5: BI.Battery50,
+            6: BI.Battery60,
+            7: BI.Battery70,
+            8: BI.Battery80,
+            9: BI.Battery90,
+            10: BI.Battery100,
         }
     _voltageMap : dict = {
-            0: BI.Battery10,
-            1: BI.Battery20,
-            # ...
+            0: BI.BatteryAlert,
+            1: BI.Battery10,
+            2: BI.Battery20,
+            3: BI.Battery30,
+            4: BI.Battery40,
+            5: BI.Battery50,
+            6: BI.Battery60,
+            7: BI.Battery70,
+            8: BI.Battery80,
+            9: BI.Battery90,
+            10: BI.Battery100,
         }
         
     def Update(self, iconManager : IM) -> None:
