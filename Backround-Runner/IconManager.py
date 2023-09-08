@@ -15,7 +15,9 @@ class IconManager(object):
     _processes : dict = {}
     
     def AddIcon(self, icon : IconStorage, name : str) -> None:
-        if name not in self._processes:
+        if icon is IconStorage.Hide:
+            self.RemoveIcon(name)
+        elif name not in self._processes:
             if os.path.exists(str(icon)):
                 offset = self.Resolution - len(self._processes) * self.Margin
                 self._processes[name] = subprocess.Popen(self.PngviewCall + [offset, str(icon)])

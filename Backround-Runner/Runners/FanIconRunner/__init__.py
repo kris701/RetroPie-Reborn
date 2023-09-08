@@ -11,17 +11,24 @@ class FanIconRunner(BIR):
     IconName : str = "Fan"
 
     _currentState : FI = FI.Hide
-    _fanMap : dict = {
+    _fanIconMap : dict = {
             50 : FI.FanSpeed1,
             60 : FI.FanSpeed2,
             70 : FI.FanSpeed3,
             80 : FI.FanAlert
         }
+    _fanSpeedMap : dict = {
+            50 : 25,
+            60 : 50,
+            70 : 75,
+            80 : 100
+        }
 
     def Update(self, iconManager : IM) -> None:
         currentTemp : float = self.GetCPUTemperature()
+        self.SetFanSpeed(currentTemp)
         newState = FI.Hide
-        for temp, state in self._fanMap:
+        for temp, state in self._fanIconMap:
             if temp > currentTemp:
                 break;
             newState = state
@@ -33,4 +40,13 @@ class FanIconRunner(BIR):
     def GetCPUTemperature(self) -> float:
         cpu = CPUTemperature()
         return cpu.temperature
+    
+    def SetFanSpeed(self, currentTemp : float):
+        newSpeed = 0
+        for temp, speed in self._fanSpeedMap:
+            if temp > currentTemp:
+                break
+            newSpeed = speed
+            
+        # Set fan speed here
     
