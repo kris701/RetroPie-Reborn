@@ -73,9 +73,9 @@
 </layers>
 <board>
 <plain>
-<wire x1="0" y1="0" x2="40.62" y2="0" width="0" layer="20"/>
-<wire x1="40.62" y1="0" x2="40.62" y2="14.91" width="0" layer="20"/>
-<wire x1="40.62" y1="14.91" x2="0" y2="14.91" width="0" layer="20"/>
+<wire x1="0" y1="0" x2="38.08" y2="0" width="0" layer="20"/>
+<wire x1="38.08" y1="0" x2="38.08" y2="14.91" width="0" layer="20"/>
+<wire x1="38.08" y1="14.91" x2="0" y2="14.91" width="0" layer="20"/>
 <wire x1="0" y1="14.91" x2="0" y2="0" width="0" layer="20"/>
 <dimension x1="12.7" y1="11.43" x2="33.02" y2="11.43" x3="22.86" y3="15.24" textsize="1.778" layer="1"/>
 <hole x="0" y="15.24" drill="0.35"/>
@@ -94,7 +94,6 @@
 <hole x="33.02" y="15.24" drill="0.35"/>
 <hole x="35.56" y="15.24" drill="0.35"/>
 <hole x="38.1" y="15.24" drill="0.35"/>
-<hole x="40.64" y="15.24" drill="0.35"/>
 <hole x="0" y="12.7" drill="0.35"/>
 <hole x="0" y="10.16" drill="0.35"/>
 <hole x="0" y="7.62" drill="0.35"/>
@@ -116,12 +115,15 @@
 <hole x="33.02" y="0" drill="0.35"/>
 <hole x="35.56" y="0" drill="0.35"/>
 <hole x="38.1" y="0" drill="0.35"/>
-<hole x="40.64" y="0" drill="0.35"/>
-<hole x="40.64" y="2.54" drill="0.35"/>
-<hole x="40.64" y="5.08" drill="0.35"/>
-<hole x="40.64" y="7.62" drill="0.35"/>
-<hole x="40.64" y="10.16" drill="0.35"/>
-<hole x="40.64" y="12.7" drill="0.35"/>
+<hole x="38.1" y="2.54" drill="0.35"/>
+<hole x="38.1" y="5.08" drill="0.35"/>
+<hole x="38.1" y="7.62" drill="0.35"/>
+<hole x="38.1" y="10.16" drill="0.35"/>
+<hole x="38.1" y="12.7" drill="0.35"/>
+<dimension x1="33.02" y1="1.27" x2="25.4" y2="1.27" x3="29.21" y3="-2.54" textsize="1.778" layer="1"/>
+<hole x="25.4" y="6.35" drill="0.35"/>
+<dimension x1="0" y1="17.78" x2="38.1" y2="17.78" x3="19.05" y3="20.32" textsize="1.778" layer="1"/>
+<dimension x1="-2.54" y1="15.24" x2="-2.54" y2="0" x3="-10.16" y3="7.62" textsize="1.778" layer="1"/>
 </plain>
 <libraries>
 <library name="pinhead" urn="urn:adsk.eagle:library:325">
@@ -369,8 +371,8 @@ design rules under a new name.</description>
 <contactref element="JP1" pad="1"/>
 <polygon width="0.635" layer="16">
 <vertex x="0" y="15.24"/>
-<vertex x="40.64" y="15.24"/>
-<vertex x="40.64" y="0"/>
+<vertex x="38.1" y="15.24"/>
+<vertex x="38.1" y="0"/>
 <vertex x="0" y="0"/>
 </polygon>
 </signal>
@@ -424,7 +426,7 @@ design rules under a new name.</description>
 <wire x1="34.036" y1="9.525" x2="32.766" y2="9.525" width="0.1524" layer="16"/>
 <wire x1="32.766" y1="9.525" x2="32.258" y2="9.017" width="0.1524" layer="16"/>
 <wire x1="32.258" y1="9.017" x2="32.258" y2="4.318" width="0.1524" layer="16"/>
-<wire x1="35.052" y1="6.477" x2="37.338" y2="6.477" width="0.635" layer="16"/>
+<wire x1="35.052" y1="6.477" x2="36.068" y2="6.477" width="0.635" layer="16"/>
 </signal>
 <signal name="B1">
 <contactref element="JP1" pad="2"/>
