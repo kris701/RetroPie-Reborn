@@ -41,7 +41,7 @@ class IconManager(object):
         
     def RemoveIcon(self, name : str) -> None:
         if name in self._processes:
-            self._processes = self._processes.pop(name)
+            self._processes.pop(name)
             self._changed = True
             
     def ClearIcons(self) -> None:
