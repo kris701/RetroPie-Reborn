@@ -26,4 +26,4 @@ while True:
 
     print("works")
 
-    time.sleep(1000)
+    time.sleep(1)
