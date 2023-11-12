@@ -16,6 +16,7 @@ class IconManager(object):
             self.RemoveIcon(name)
         elif name not in self._processes:
             if os.path.exists(str(icon)):
+                print("adds icon!")
                 offset = self.Resolution - len(self._processes) * self.Margin
                 self._processes[name] = subprocess.Popen(self.PngviewCall + [offset, str(icon)])
         
