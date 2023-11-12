@@ -41,10 +41,10 @@ class FanIconRunner():
     
     def SetFanSpeed(self, currentTemp : float):
         newSpeed = 0
-        for temp, speed in self._fanSpeedMap:
+        for temp in self._fanSpeedMap:
             if temp > currentTemp:
                 break
-            newSpeed = speed
+            newSpeed = self._fanSpeedMap[temp]
             
         # Set fan speed here
     
