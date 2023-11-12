@@ -15,30 +15,30 @@ class BatteryIconRunner():
     
     _chargeVoltage : float = 4.1
     _ChargevoltageMap : dict = {
-            0: BI.BatteryAlert,
-            1: BI.Battery10,
-            2: BI.Battery20,
-            3: BI.Battery30,
-            4: BI.Battery40,
-            5: BI.Battery50,
-            6: BI.Battery60,
-            7: BI.Battery70,
-            8: BI.Battery80,
-            9: BI.Battery90,
-            10: BI.Battery100,
+            2:   BI.BatteryAlert,
+            2.2: BI.Battery10,
+            2.4: BI.Battery20,
+            2.6: BI.Battery30,
+            2.8: BI.Battery40,
+            3:   BI.Battery50,
+            3.2: BI.Battery60,
+            3.4: BI.Battery70,
+            3.6: BI.Battery80,
+            3.8: BI.Battery90,
+            4:   BI.Battery100,
         }
     _voltageMap : dict = {
-            0: BI.BatteryAlert,
-            1: BI.Battery10,
-            2: BI.Battery20,
-            3: BI.Battery30,
-            4: BI.Battery40,
-            5: BI.Battery50,
-            6: BI.Battery60,
-            7: BI.Battery70,
-            8: BI.Battery80,
-            9: BI.Battery90,
-            10: BI.Battery100,
+            2:   BI.BatteryAlert,
+            2.2: BI.Battery10,
+            2.4: BI.Battery20,
+            2.6: BI.Battery30,
+            2.8: BI.Battery40,
+            3:   BI.Battery50,
+            3.2: BI.Battery60,
+            3.4: BI.Battery70,
+            3.6: BI.Battery80,
+            3.8: BI.Battery90,
+            4:   BI.Battery100,
         }
         
     def Update(self, iconManager) -> None:
@@ -53,15 +53,15 @@ class BatteryIconRunner():
         if voltage >= self._chargeVoltage:
             state : BI = BI.Battery10
             for v, s in self._ChargevoltageMap:
+                if voltage < v:
+                    break   
                 state = s
-                if voltage > v:
-                    break    
         else:
             state : BI = BI.Battery10
             for v in self._voltageMap:
-                state = self._voltageMap[v]
-                if voltage > v:
+                if voltage < v:
                     break    
+                state = self._voltageMap[v]
                 
         return state
 
