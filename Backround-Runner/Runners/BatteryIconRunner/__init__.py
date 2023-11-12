@@ -36,8 +36,6 @@ class BatteryIconRunner():
         
     def Update(self, iconManager) -> None:
         checkState : BI = self.GetBatteryState()
-        print("state: ")
-        print(checkState)
         if checkState != self._currentState:
             self._currentState = checkState
             iconManager.RemoveIcon(self.IconName);

@@ -6,7 +6,7 @@ class IconManager(object):
     PngviewPath : str = "/usr/local/bin/pngview"
     PngviewCall=[PngviewPath, "-d", "0", "-b", "0x0000", "-n", "-l", "15000", "-y", "0", "-x"]
     IconOffset : int = 24
-    Resolution : int = 1024  
+    Resolution : int = 500
     Margin : int = 5
 
     _processes : dict = {}
