@@ -26,7 +26,7 @@ class FanIconRunner():
     def __init__(self) -> None:
         GPIO.setmode(GPIO.BCM)
         GPIO.setup(13, GPIO.OUT)
-        self._pwm = GPIO.PWM(13, 50)
+        self._pwm = GPIO.PWM(13, 100)
         self._pwm.start(0)
 
     def Update(self, iconManager) -> None:
@@ -52,8 +52,6 @@ class FanIconRunner():
             if temp > currentTemp:
                 break
             newSpeed = self._fanSpeedMap[temp]
-            
-        print("set speed:")
-        print(newSpeed)
+
         self._pwm.ChangeDutyCycle(newSpeed)
     
