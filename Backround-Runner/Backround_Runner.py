@@ -24,6 +24,4 @@ while True:
     fanIconRunner.Update(iconManager)
     underVoltageIconRunner.Update(iconManager)
 
-    print("works")
-
     time.sleep(1)
