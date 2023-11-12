@@ -1,4 +1,4 @@
 class PerformanceIcons():
     Hide = "Hide"
-    Capped = "Icons/thermometer.png"
-    Throttled = "Icons/thermometer-lines.png"
+    Capped = "Runners/PerformanceIconRunner/Icons/thermometer.png"
+    Throttled = "Runners/PerformanceIconRunner/Icons/thermometer-lines.png"

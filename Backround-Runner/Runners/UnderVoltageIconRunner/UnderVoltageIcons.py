@@ -1,6 +1,6 @@
 class UnderVoltageIcons():
     Hide = "Hide"
-    UnderVoltage = "Icons/under-voltaged.png"
+    UnderVoltage = "Runners/UnderVoltageIconRunner/Icons/under-voltaged.png"
 
 
 
