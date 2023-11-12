@@ -9,23 +9,39 @@ class IconManager(object):
     Resolution : int = 1024
     Margin : int = 5
 
+    _currents : dict = {}
     _processes : dict = {}
+    _changed : bool = False
+
+    def Update(self) -> None:
+        for name in self._processes:
+            self._processes[name].kill()
+            self._processes[name].wait();
+            del self._processes[name]
+
+        counter : int = 1
+        for name in self._currents:
+            offset = self.Resolution - counter * (self.Margin + self.IconOffset)
+            self._processes[name] = subprocess.Popen(self.PngviewCall + [str(offset), str(self._currents[name])])
+            counter += 1
+
+        self._changed = False
     
     def AddIcon(self, icon, name : str) -> None:
         if icon is "Hide":
             self.RemoveIcon(name)
         elif name not in self._processes:
             if os.path.exists(str(icon)):
-                print(len(self._processes))
-                offset = self.Resolution - (self.Margin + self.IconOffset) - len(self._processes) * (self.Margin + self.IconOffset)
-                self._processes[name] = subprocess.Popen(self.PngviewCall + [str(offset), str(icon)])
+                self._currents[name] = icon
+                self._changed = True
+                
+                #offset = self.Resolution - (self.Margin + self.IconOffset) - len(self._processes) * (self.Margin + self.IconOffset)
+                #self._processes[name] = subprocess.Popen(self.PngviewCall + [str(offset), str(icon)])
         
     def RemoveIcon(self, name : str) -> None:
         if name in self._processes:
-            self._processes[name].kill()
-            self._processes[name].wait();
-            #del self._processes[name]
             self._processes = self._processes.pop(name)
+            self._changed = True
             
     def ClearIcons(self) -> None:
         for name in self._processes:

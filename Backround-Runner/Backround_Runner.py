@@ -23,5 +23,7 @@ while True:
     batteryIconRunner.Update(iconManager)
     fanIconRunner.Update(iconManager)
     underVoltageIconRunner.Update(iconManager)
+    
+    iconManager.Update()
 
     time.sleep(1)
