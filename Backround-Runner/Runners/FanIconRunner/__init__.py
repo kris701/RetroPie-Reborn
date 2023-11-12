@@ -22,7 +22,6 @@ class FanIconRunner():
             70 : 75,
             80 : 100
         }
-    _pwm;
 
     def __init__(self) -> None:
         GPIO.setmode(GPIO.BCM)
