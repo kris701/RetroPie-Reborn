@@ -60,4 +60,4 @@ class BatteryIconRunner():
 
     def GetBatteryVoltage(self) -> float:
         # insert ADC implementation here
-        pass
+        return 3
