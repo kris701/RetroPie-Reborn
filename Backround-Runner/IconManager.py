@@ -25,6 +25,7 @@ class IconManager(object):
             self._processes[name].wait(1);
             print("del")
             del self._processes[name]
+            print("end")
             
     def ClearIcons(self) -> None:
         for name in self._processes:
