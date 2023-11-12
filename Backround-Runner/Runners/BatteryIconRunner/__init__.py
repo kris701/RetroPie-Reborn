@@ -51,13 +51,13 @@ class BatteryIconRunner():
     def GetBatteryState(self) -> BI:
         voltage = self.GetBatteryVoltage()
         if voltage >= self._chargeVoltage:
-            state : BI = BI.Battery10
+            state : BI = BI.BatteryAlert
             for v, s in self._ChargevoltageMap:
                 if voltage < v:
                     break   
                 state = s
         else:
-            state : BI = BI.Battery10
+            state : BI = BI.BatteryAlert
             for v in self._voltageMap:
                 if voltage < v:
                     break    
