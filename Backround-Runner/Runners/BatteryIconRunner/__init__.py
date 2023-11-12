@@ -1,10 +1,17 @@
 from enum import Enum
+import board
+import busio
+import adafruit_ads1x15.ads1015 as ADS
+from adafruit_ads1x15.analog_in import AnalogIn
 
 from .BatteryIcons import BatteryIcons as BI
 
 class BatteryIconRunner():
     IconName : str = "Battery"
     _currentState : BI = BI.Battery10
+    _i2c = busio.I2C(board.SCL, board.SDA)
+    _ads = ADS.ADS1015(_i2c)
+    _chan = AnalogIn(_ads, ADS.P0)
     
     _chargeVoltage : float = 4.1
     _ChargevoltageMap : dict = {
@@ -59,5 +66,4 @@ class BatteryIconRunner():
         return state
 
     def GetBatteryVoltage(self) -> float:
-        # insert ADC implementation here
-        return 3
+        return _chan.voltage
