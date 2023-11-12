@@ -6,7 +6,7 @@ from .UnderVoltageIcons import UnderVoltageIcons as UI
 
 class UnderVoltageIconRunner():
     IconName : str = "Undervolt"
-    _envCmd="vcgencmd get_throttled"
+    _envCmd="vcgencmd get_throttled" 
     
     _currentState : UI = UI.Hide
 

@@ -30,9 +30,9 @@
     <Compile Include="Runners\BluetoothIconRunner\__init__.py" />
     <Compile Include="Runners\FanIconRunner\FanIcons.py" />
     <Compile Include="Runners\FanIconRunner\__init__.py" />
+    <Compile Include="Runners\PerformanceIconRunner\PerformanceIcons.py" />
     <Compile Include="Runners\UnderVoltageIconRunner\UnderVoltageIcons.py" />
     <Compile Include="Runners\UnderVoltageIconRunner\__init__.py" />
-    <Compile Include="Runners\PerformanceIconRunner\PerformanceIcons.py" />
     <Compile Include="Runners\PerformanceIconRunner\__init__.py" />
     <Compile Include="Runners\WifiIconRunner\WifiIcons.py" />
     <Compile Include="Runners\WifiIconRunner\__init__.py" />
@@ -56,8 +56,6 @@
     <Content Include="Runners\FanIconRunner\Icons\fan-speed-1.png" />
     <Content Include="Runners\FanIconRunner\Icons\fan-speed-2.png" />
     <Content Include="Runners\FanIconRunner\Icons\fan-speed-3.png" />
-    <Content Include="Runners\PerformanceIconRunner\Icons\thermometer-lines.png" />
-    <Content Include="Runners\PerformanceIconRunner\Icons\thermometer.png" />
     <Content Include="Runners\UndervoltageIconRunner\Icons\under-voltaged.png" />
     <Content Include="Runners\WifiIconRunner\Icons\wifi-connected.png" />
     <Content Include="Runners\WifiIconRunner\Icons\wifi-seaching.png" />
