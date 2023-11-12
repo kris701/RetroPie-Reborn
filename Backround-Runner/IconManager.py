@@ -35,9 +35,6 @@ class IconManager(object):
             if os.path.exists(str(icon)):
                 self._currents[name] = icon
                 self._changed = True
-                
-                #offset = self.Resolution - (self.Margin + self.IconOffset) - len(self._processes) * (self.Margin + self.IconOffset)
-                #self._processes[name] = subprocess.Popen(self.PngviewCall + [str(offset), str(icon)])
         
     def RemoveIcon(self, name : str) -> None:
         if name in self._processes:

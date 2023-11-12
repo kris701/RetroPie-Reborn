@@ -2,6 +2,7 @@ from enum import Enum
 import os
 import subprocess
 from gpiozero import CPUTemperature
+from RPi import GPIO
 
 from .FanIcons import FanIcons as FI
 
@@ -21,6 +22,13 @@ class FanIconRunner():
             70 : 75,
             80 : 100
         }
+    _pwm;
+
+    def __init__(self) -> None:
+        GPIO.setmode(GPIO.BCM)
+        GPIO.setup(13, GPIO.OUT)
+        self._pwm = GPIO.PWM(13, 50)
+        self._pwm.start(0)
 
     def Update(self, iconManager) -> None:
         currentTemp : float = self.GetCPUTemperature()
@@ -40,11 +48,11 @@ class FanIconRunner():
         return cpu.temperature
     
     def SetFanSpeed(self, currentTemp : float):
-        newSpeed = 0
+        newSpeed : int = 50
         for temp in self._fanSpeedMap:
             if temp > currentTemp:
                 break
             newSpeed = self._fanSpeedMap[temp]
             
-        # Set fan speed here
+        self._pwm.ChangeDutyCycle(newSpeed)
     
