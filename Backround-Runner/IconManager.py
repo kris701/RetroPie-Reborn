@@ -6,7 +6,7 @@ class IconManager(object):
     PngviewPath : str = "/usr/local/bin/pngview"
     PngviewCall=[PngviewPath, "-d", "0", "-b", "0x0000", "-n", "-l", "15000", "-y", "0", "-x"]
     IconOffset : int = 24
-    Resolution : int = 500
+    Resolution : int = 1024
     Margin : int = 5
 
     _processes : dict = {}
@@ -17,7 +17,7 @@ class IconManager(object):
             self.RemoveIcon(name)
         elif name not in self._processes:
             if os.path.exists(str(icon)):
-                offset = self.Resolution - len(self._processes) * self.Margin
+                offset = self.Resolution - len(self._processes) * (self.Margin + self.IconOffset)
                 self._processes[name] = subprocess.Popen(self.PngviewCall + [str(offset), str(icon)])
         
     def RemoveIcon(self, name : str) -> None:
