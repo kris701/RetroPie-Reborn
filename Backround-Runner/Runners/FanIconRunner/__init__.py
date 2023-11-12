@@ -53,5 +53,7 @@ class FanIconRunner():
                 break
             newSpeed = self._fanSpeedMap[temp]
             
+        print("set speed:")
+        print(newSpeed)
         self._pwm.ChangeDutyCycle(newSpeed)
     
