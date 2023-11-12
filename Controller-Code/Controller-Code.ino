@@ -4,16 +4,20 @@
 
 // The first number corresponds to the pin number and the second number to the button number. See https://www.pjrc.com/teensy/td_joystick.html for more information.
 const uint8_t buttonsMap[][2] = {
-  {21, 7},  // L3
-  {18, 9},  // SELECT
-  {17, 10}, // START
-  {16, 8},  // R3
-  {10, 3},  // A
-  {9, 2},   // B
-  {8, 1},   // Y
-  {7, 4},   // X
-  {6, 6},   // R
-  {4, 5}    // L
+  {8, 1},   // L3
+  {11, 2},  // R3
+  {16, 3},  // Sqare
+  {15, 4},  // Circle
+  {14, 5},  // Triangle
+  {13, 6},  // Cross
+  {17, 7},  // R1
+  {12, 8},  // R2
+  {6, 9},   // L1
+  {7, 10},  // L2
+  {5, 11},  // SELECT
+  {1, 12},  // START
+  {10, 13}, // AUX1
+  {23, 14}, // AUX2
 };
 
 const int buttonsMapSize = ARRAY_SIZE(buttonsMap);
@@ -23,8 +27,8 @@ Bounce* buttons[buttonsMapSize];
 // Pin numbers used by the dpad
 const uint8_t down = 2;
 const uint8_t right = 0;
-const uint8_t up = 3;
-const uint8_t left = 1;
+const uint8_t up = 4;
+const uint8_t left = 3;
 
 const uint8_t dpadButtons[] = { up, right, down, left };
 
@@ -51,9 +55,9 @@ void loop() {
     // read 6 analog inputs and use them for the joystick axis
     Joystick.X(analogRead(2));
     // we need to invert the y axis
-    Joystick.Y(1023 - analogRead(1));
-    Joystick.Z(analogRead(6));
-    Joystick.Zrotate(analogRead(7));
+    Joystick.Y(1023 - analogRead(3));
+    Joystick.Z(analogRead(0));
+    Joystick.Zrotate(analogRead(1));
 
     // read digital pins and use them for the buttons
     for (int i = 0; i < buttonsMapSize; ++i) {
