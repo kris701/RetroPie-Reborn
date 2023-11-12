@@ -2,9 +2,6 @@ import os
 import subprocess
 from enum import Enum
 
-class IconStorage(Enum):
-    Hide = "None"
-
 class IconManager(object):
     PngviewPath : str = "/usr/local/bin/pngview"
     PngviewCall=[PngviewPath, "-d", "0", "-b", "0x0000", "-n", "-l", "15000", "-y", "0", "-x"]
@@ -14,8 +11,8 @@ class IconManager(object):
 
     _processes : dict = {}
     
-    def AddIcon(self, icon : IconStorage, name : str) -> None:
-        if icon is IconStorage.Hide:
+    def AddIcon(self, icon, name : str) -> None:
+        if icon is "Hide":
             self.RemoveIcon(name)
         elif name not in self._processes:
             if os.path.exists(str(icon)):

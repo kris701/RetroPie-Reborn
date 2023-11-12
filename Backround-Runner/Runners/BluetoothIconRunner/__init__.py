@@ -2,17 +2,15 @@ from enum import Enum
 import os
 import subprocess
 
-from ..BaseIconRunner import BaseIconRunner as BIR
-from ...IconManager import IconManager as IM
 from .BluetoothIcons import BluetoothIcons as BI
 
-class BluetoothIconRunner(BIR):
+class BluetoothIconRunner():
     IconName : str = "Bluetooth"
         
     _bluetootDevicesDir :str = "/sys/class/bluetooth"
     _currentState : BI = BI.Hide
     
-    def Update(self, iconManager : IM) -> None:
+    def Update(self, iconManager) -> None:
         checkState : BI = self.GetBluetoothState()
         if checkState != self._currentState:
             self._currentState = checkState

@@ -24,7 +24,6 @@
     <Compile Include="Backround_Runner_old.py" />
     <Compile Include="Backround_Runner.py" />
     <Compile Include="IconManager.py" />
-    <Compile Include="Runners\BaseIconRunner.py" />
     <Compile Include="Runners\BatteryIconRunner\BatteryIcons.py" />
     <Compile Include="Runners\BatteryIconRunner\__init__.py" />
     <Compile Include="Runners\BluetoothIconRunner\BluetoothIcons.py" />

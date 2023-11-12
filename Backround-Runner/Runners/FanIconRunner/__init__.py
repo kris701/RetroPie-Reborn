@@ -3,11 +3,9 @@ import os
 import subprocess
 from gpiozero import CPUTemperature
 
-from ..BaseIconRunner import BaseIconRunner as BIR
-from ...IconManager import IconManager as IM
 from .FanIcons import FanIcons as FI
 
-class FanIconRunner(BIR):
+class FanIconRunner():
     IconName : str = "Fan"
 
     _currentState : FI = FI.Hide
@@ -24,7 +22,7 @@ class FanIconRunner(BIR):
             80 : 100
         }
 
-    def Update(self, iconManager : IM) -> None:
+    def Update(self, iconManager) -> None:
         currentTemp : float = self.GetCPUTemperature()
         self.SetFanSpeed(currentTemp)
         newState = FI.Hide

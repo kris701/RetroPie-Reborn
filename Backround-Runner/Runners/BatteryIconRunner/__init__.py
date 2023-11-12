@@ -1,10 +1,8 @@
 from enum import Enum
 
-from ..BaseIconRunner import BaseIconRunner as BIR
-from ...IconManager import IconManager as IM
 from .BatteryIcons import BatteryIcons as BI
 
-class BatteryIconRunner(BIR):
+class BatteryIconRunner():
     IconName : str = "Battery"
     _currentState : BI = BI.Battery10
     
@@ -36,7 +34,7 @@ class BatteryIconRunner(BIR):
             10: BI.Battery100,
         }
         
-    def Update(self, iconManager : IM) -> None:
+    def Update(self, iconManager) -> None:
         checkState : BI = self.GetBatteryState()
         if checkState != self._currentState:
             self._currentState = checkState

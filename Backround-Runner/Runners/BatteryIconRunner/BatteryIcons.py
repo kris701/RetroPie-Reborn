@@ -1,6 +1,5 @@
-from ...IconManager import IconStorage as IS
-
-class BatteryIcons(IS):
+class BatteryIcons():
+    Hide = "Hide"
     BatteryAlert = "Icons/ic_battery_alert_red_white_36dp.png"
     Battery10 = "Icons/battery-10.png"
     Battery20 = "Icons/battery-20.png"

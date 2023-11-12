@@ -1,6 +1,5 @@
-from ...IconManager import IconStorage as IS
-
-class FanIcons(IS):
+class FanIcons():
+    Hide = "None"
     FanAlert = "Icons/fan-alert.png"
     FanSpeed1 = "Icons/fan-speed-1.png"
     FanSpeed2 = "Icons/fan-speed-2.png"

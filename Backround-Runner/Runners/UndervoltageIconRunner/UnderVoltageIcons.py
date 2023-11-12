@@ -1,6 +1,5 @@
-from ...IconManager import IconStorage as IS
-
-class UnderVoltageIcons(IS):
+class UnderVoltageIcons():
+    Hide = "Hide"
     UnderVoltage = "Icons/under-voltaged.png"
 
 

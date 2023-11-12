@@ -1,6 +1,5 @@
-from ...IconManager import IconStorage as IS
-
-class WifiIcons(IS):
+class WifiIcons():
+    Hide = "None"
     Connected = "Icons/wifi-connected.png"
     Searching = "Icons/wifi-searching.png"
 

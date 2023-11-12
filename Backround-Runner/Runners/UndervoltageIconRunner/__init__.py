@@ -2,17 +2,15 @@ from enum import Enum
 import subprocess
 import re
 
-from ..BaseIconRunner import BaseIconRunner as BIR
-from ...IconManager import IconManager as IM
 from .UnderVoltageIcons import UnderVoltageIcons as UI
 
-class UnderVoltageIconRunner(BIR):
+class UnderVoltageIconRunner():
     IconName : str = "Undervolt"
     _envCmd="vcgencmd get_throttled"
     
     _currentState : UI = UI.Hide
 
-    def Update(self, iconManager : IM) -> None:
+    def Update(self, iconManager) -> None:
         checkState : UI = self.GetFrequencyState()
         if checkState != self._currentState:
             self._currentState = checkState

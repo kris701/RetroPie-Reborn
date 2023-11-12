@@ -1,9 +1,9 @@
 import time
 
-from .IconManager import IconManager as IM
+import IconManager as IM
 from Runners.WifiIconRunner import WifiIconRunner as WIR
 from Runners.BluetoothIconRunner import BluetoothIconRunner as BIR
-from Runners.PerformanceIconRunner import PerformanceIconRunner as PIR
+#from Runners.PerformanceIconRunner import PerformanceIconRunner as PIR
 from Runners.BatteryIconRunner import BatteryIconRunner as BaIR
 from Runners.FanIconRunner import FanIconRunner as FIR
 from Runners.UnderVoltageIconRunner import UnderVoltageIconRunner as UVIR

@@ -1,17 +1,15 @@
 from enum import Enum
 
-from ..BaseIconRunner import BaseIconRunner as BIR
-from ...IconManager import IconManager as IM
 from .WifiIcons import WifiIcons as WI
 
-class WifiIconRunner(BIR):
+class WifiIconRunner():
     IconName : str = "Wifi"
         
     _wifiCarrier = "/sys/class/net/wlan0/carrier" # 1 when wifi connected, 0 when disconnected and/or ifdown
     _wifiLinkmode = "/sys/class/net/wlan0/link_mode" # 1 when ifup, 0 when ifdown
     _currentState : WI = WI.Hide
 
-    def Update(self, iconManager : IM) -> None:
+    def Update(self, iconManager) -> None:
         checkState : WI = self.GetWifiState()
         if checkState != self._currentState:
             self._currentState = checkState
