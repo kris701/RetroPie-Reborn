@@ -12,7 +12,6 @@ class IconManager(object):
     _processes : dict = {}
     
     def AddIcon(self, icon, name : str) -> None:
-        print(icon)
         if icon is "Hide":
             self.RemoveIcon(name)
         elif name not in self._processes:
