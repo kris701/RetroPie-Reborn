@@ -26,10 +26,10 @@ class FanIconRunner():
         currentTemp : float = self.GetCPUTemperature()
         self.SetFanSpeed(currentTemp)
         newState = FI.Hide
-        for temp, state in self._fanIconMap:
+        for temp in self._fanIconMap:
             if temp > currentTemp:
                 break;
-            newState = state
+            newState = self._fanIconMap[temp]
         if self._currentState != newState:
             self._currentState = newState
             iconManager.RemoveIcon(self.IconName);
