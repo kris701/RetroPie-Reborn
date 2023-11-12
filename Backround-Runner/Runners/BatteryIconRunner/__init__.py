@@ -51,8 +51,8 @@ class BatteryIconRunner():
                     break    
         else:
             state : BI = BI.Battery10
-            for v, s in self._voltageMap:
-                state = s
+            for v in self._voltageMap:
+                state = self._voltageMap[v]
                 if voltage > v:
                     break    
                 
