@@ -66,4 +66,4 @@ class BatteryIconRunner():
         return state
 
     def GetBatteryVoltage(self) -> float:
-        return _chan.voltage
+        return self._chan.voltage
