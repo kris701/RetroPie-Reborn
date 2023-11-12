@@ -31,8 +31,8 @@
     <Compile Include="Runners\FanIconRunner\FanIcons.py" />
     <Compile Include="Runners\FanIconRunner\__init__.py" />
     <Compile Include="Runners\PerformanceIconRunner\PerformanceIcons.py" />
-    <Compile Include="Runners\_UnderVoltageIconRunner\UnderVoltageIcons.py" />
-    <Compile Include="Runners\_UnderVoltageIconRunner\__init__.py" />
+    <Compile Include="Runners\UnderVoltageIconRunner\UnderVoltageIcons.py" />
+    <Compile Include="Runners\UnderVoltageIconRunner\__init__.py" />
     <Compile Include="Runners\PerformanceIconRunner\__init__.py" />
     <Compile Include="Runners\WifiIconRunner\WifiIcons.py" />
     <Compile Include="Runners\WifiIconRunner\__init__.py" />
@@ -56,7 +56,7 @@
     <Content Include="Runners\FanIconRunner\Icons\fan-speed-1.png" />
     <Content Include="Runners\FanIconRunner\Icons\fan-speed-2.png" />
     <Content Include="Runners\FanIconRunner\Icons\fan-speed-3.png" />
-    <Content Include="Runners\_UnderVoltageIconRunner\Icons\under-voltaged.png" />
+    <Content Include="Runners\UnderVoltageIconRunner\Icons\under-voltaged.png" />
     <Content Include="Runners\WifiIconRunner\Icons\wifi-connected.png" />
     <Content Include="Runners\WifiIconRunner\Icons\wifi-seaching.png" />
   </ItemGroup>
@@ -68,8 +68,8 @@
     <Folder Include="Runners\BluetoothIconRunner\Icons\" />
     <Folder Include="Runners\FanIconRunner\" />
     <Folder Include="Runners\FanIconRunner\Icons\" />
-    <Folder Include="Runners\_UnderVoltageIconRunner\" />
-    <Folder Include="Runners\_UnderVoltageIconRunner\Icons\" />
+    <Folder Include="Runners\UnderVoltageIconRunner\" />
+    <Folder Include="Runners\UnderVoltageIconRunner\Icons\" />
     <Folder Include="Runners\PerformanceIconRunner\" />
     <Folder Include="Runners\PerformanceIconRunner\Icons\" />
     <Folder Include="Runners\WifiIconRunner\" />
