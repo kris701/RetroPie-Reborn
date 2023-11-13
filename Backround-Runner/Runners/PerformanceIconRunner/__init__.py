@@ -27,8 +27,5 @@ class PerformanceIconRunner():
         if throttled:
             state = PI.Throttled
             
-        print("State: ")
-        print(state)
-
         return state
     
