@@ -18,7 +18,7 @@ class IconManager(object):
         for name in self._processes:
             self._processes[name].kill()
             self._processes[name].wait();
-            del self._processes[name]
+        self._processes = {}
 
         counter : int = 1
         for name in self._currents:
