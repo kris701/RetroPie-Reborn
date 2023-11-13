@@ -14,6 +14,9 @@ class IconManager(object):
     _changed : bool = False
 
     def Update(self) -> None:
+        if self._changed is False:
+            return
+        
         for name in self._processes:
             self._processes[name].kill()
             self._processes[name].wait();
