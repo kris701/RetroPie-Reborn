@@ -11,14 +11,14 @@ class FanIconRunner():
 
     _currentState : FI = FI.Hide
     _fanIconMap : dict = {
-            50 : FI.FanSpeed1,
-            60 : FI.FanSpeed2,
-            70 : FI.FanSpeed3,
+            50 : FI.Hide,
+            60 : FI.Hide,
+            70 : FI.FanOn,
             80 : FI.FanAlert
         }
     _fanSpeedMap : dict = {
             50 : 0,
-            60 : 25,
+            60 : 0,
             70 : 75,
             80 : 100
         }
@@ -31,13 +31,13 @@ class FanIconRunner():
 
     def Update(self, iconManager) -> None:
         currentTemp : float = self.GetCPUTemperature()
-        self.SetFanSpeed(currentTemp)
         newState = FI.Hide
         for temp in self._fanIconMap:
             if temp > currentTemp:
                 break;
             newState = self._fanIconMap[temp]
         if self._currentState != newState:
+            self.SetFanSpeed(currentTemp)
             self._currentState = newState
             iconManager.RemoveIcon(self.IconName);
             iconManager.AddIcon(newState, self.IconName)    

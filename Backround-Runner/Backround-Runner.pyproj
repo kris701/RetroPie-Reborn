@@ -53,6 +53,7 @@
     <Content Include="Runners\BluetoothIconRunner\Icons\bluetooth-connected.png" />
     <Content Include="Runners\BluetoothIconRunner\Icons\bluetooth-searching.png" />
     <Content Include="Runners\FanIconRunner\Icons\fan-alert.png" />
+    <Content Include="Runners\FanIconRunner\Icons\fan-on.png" />
     <Content Include="Runners\FanIconRunner\Icons\fan-speed-1.png" />
     <Content Include="Runners\FanIconRunner\Icons\fan-speed-2.png" />
     <Content Include="Runners\FanIconRunner\Icons\fan-speed-3.png" />
