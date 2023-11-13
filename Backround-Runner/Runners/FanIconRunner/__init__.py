@@ -47,6 +47,7 @@ class FanIconRunner():
         return cpu.temperature
     
     def SetFanSpeed(self, currentTemp : float):
+        print(currentTemp)
         newSpeed : int = 50
         for temp in self._fanSpeedMap:
             if temp > currentTemp:
