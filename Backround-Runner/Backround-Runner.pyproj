@@ -57,6 +57,8 @@
     <Content Include="Runners\FanIconRunner\Icons\fan-speed-1.png" />
     <Content Include="Runners\FanIconRunner\Icons\fan-speed-2.png" />
     <Content Include="Runners\FanIconRunner\Icons\fan-speed-3.png" />
+    <Content Include="Runners\PerformanceIconRunner\Icons\thermometer-lines.png" />
+    <Content Include="Runners\PerformanceIconRunner\Icons\thermometer.png" />
     <Content Include="Runners\UnderVoltageIconRunner\Icons\under-voltaged.png" />
     <Content Include="Runners\WifiIconRunner\Icons\wifi-connected.png" />
     <Content Include="Runners\WifiIconRunner\Icons\wifi-seaching.png" />
