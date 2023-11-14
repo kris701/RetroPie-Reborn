@@ -21,20 +21,10 @@ class BluetoothIconRunner():
     def GetBluetoothState(self) -> BI:
         new_bt_state : BI = BI.Hide
         try:
-            p1 = subprocess.Popen('hciconfig', stdout = subprocess.PIPE)
-            p2 = subprocess.Popen(['awk', 'FNR == 3 {print tolower($1)}'], stdin = p1.stdout, stdout=subprocess.PIPE)
-            state=p2.communicate()[0].decode().rstrip()
-            if state == "up":
-                new_bt_state = BI.Searching
+            stdoutdata = subprocess.getoutput("hcitool con")
+            if "XX:XX:XX:XX:XX:XX" in stdoutdata.split():
+                new_bt_state = BI.Connected
         except IOError:
             pass
 
-        if new_bt_state is BI.Searching:
-            try:
-                devices=os.listdir(self._bluetootDevicesDir)
-                if len(devices) > 1:
-                    new_bt_state = BI.Connected
-            except OSError:
-                pass
-        
         return new_bt_state
