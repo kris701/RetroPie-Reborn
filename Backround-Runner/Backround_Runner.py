@@ -26,4 +26,4 @@ while True:
     
     iconManager.Update()
 
-    time.sleep(1)
+    time.sleep(5)
