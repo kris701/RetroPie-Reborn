@@ -17,15 +17,10 @@ class BatteryIconRunner():
     
     _voltageMap : dict = {
             2:   BI.BatteryAlert,
-            2.2: BI.Battery10,
             2.4: BI.Battery20,
-            2.6: BI.Battery30,
             2.8: BI.Battery40,
-            3:   BI.Battery50,
             3.2: BI.Battery60,
-            3.4: BI.Battery70,
             3.6: BI.Battery80,
-            3.8: BI.Battery90,
             4:   BI.Battery100,
         }
         
