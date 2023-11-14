@@ -1,7 +1,7 @@
 class WifiIcons():
     Hide = "None"
-    Connected = "Runners/WifiIconRunner/Icons/wifi-connected.png"
-    Searching = "Runners/WifiIconRunner/Icons/wifi-searching.png"
+    Connected = "/home/pi/RetroPie-Reborn/Backround-Runner/Runners/WifiIconRunner/Icons/wifi-connected.png"
+    Searching = "/home/pi/RetroPie-Reborn/Backround-Runner/Runners/WifiIconRunner/Icons/wifi-searching.png"
 
 
 

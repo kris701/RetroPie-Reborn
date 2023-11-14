@@ -1,6 +1,6 @@
 class UnderVoltageIcons():
     Hide = "Hide"
-    UnderVoltage = "Runners/UnderVoltageIconRunner/Icons/under-voltaged.png"
+    UnderVoltage = "/home/pi/RetroPie-Reborn/Backround-Runner/Runners/UnderVoltageIconRunner/Icons/under-voltaged.png"
 
 
 
