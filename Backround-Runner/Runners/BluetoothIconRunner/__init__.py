@@ -24,7 +24,7 @@ class BluetoothIconRunner():
             stdoutdata = subprocess.getoutput("hcitool con")
             if "XX:XX:XX:XX:XX:XX" in stdoutdata.split():
                 new_bt_state = BI.Connected
-        except IOError:
-            pass
+        except Exception:
+            return new_bt_state
 
         return new_bt_state

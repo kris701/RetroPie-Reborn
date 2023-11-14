@@ -35,7 +35,7 @@ class WifiIconRunner():
                     new_wifi_state = WI.Searching
                     # else - must be ifdown
       
-        except IOError:
-            pass
+        except Exception:
+            return new_wifi_state
         
         return new_wifi_state

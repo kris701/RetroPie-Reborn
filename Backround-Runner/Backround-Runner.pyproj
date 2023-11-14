@@ -57,9 +57,9 @@
     <Content Include="Runners\FanIconRunner\Icons\fan-speed-1.png" />
     <Content Include="Runners\FanIconRunner\Icons\fan-speed-2.png" />
     <Content Include="Runners\FanIconRunner\Icons\fan-speed-3.png" />
+    <Content Include="Runners\UnderVoltageIconRunner\Icons\under-voltaged.png" />
     <Content Include="Runners\PerformanceIconRunner\Icons\thermometer-lines.png" />
     <Content Include="Runners\PerformanceIconRunner\Icons\thermometer.png" />
-    <Content Include="Runners\UnderVoltageIconRunner\Icons\under-voltaged.png" />
     <Content Include="Runners\WifiIconRunner\Icons\wifi-connected.png" />
     <Content Include="Runners\WifiIconRunner\Icons\wifi-seaching.png" />
   </ItemGroup>
@@ -72,9 +72,9 @@
     <Folder Include="Runners\FanIconRunner\" />
     <Folder Include="Runners\FanIconRunner\Icons\" />
     <Folder Include="Runners\UnderVoltageIconRunner\" />
-    <Folder Include="Runners\UnderVoltageIconRunner\Icons\" />
     <Folder Include="Runners\PerformanceIconRunner\" />
     <Folder Include="Runners\PerformanceIconRunner\Icons\" />
+    <Folder Include="Runners\UnderVoltageIconRunner\Icons\" />
     <Folder Include="Runners\WifiIconRunner\" />
     <Folder Include="Runners\WifiIconRunner\Icons\" />
   </ItemGroup>

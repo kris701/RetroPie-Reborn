@@ -11,18 +11,18 @@ class UnderVoltageIconRunner():
     _currentState : UI = UI.Hide
 
     def Update(self, iconManager) -> None:
-        checkState : UI = self.GetFrequencyState()
+        checkState : UI = self.GetUnderVoltageState()
         if checkState != self._currentState:
             self._currentState = checkState
             iconManager.RemoveIcon(self.IconName);
             iconManager.AddIcon(checkState, self.IconName)     
     
-    def GetFrequencyState(self) -> float:
+    def GetUnderVoltageState(self) -> float:
         state = UI.Hide
         try:
-            val=int(re.search("throttled=(0x\d+)", subprocess.check_output(self._envCmd.split()).decode().rstrip()).groups()[0], 16)
-            underVoltaged : bool = bool(val & 0x01)
-            if underVoltaged:
+            throttled_output = subprocess.check_output(self._envCmd, shell=True)
+            throttled_binary = bin(int(throttled_output.split(b'=')[1], 0)) 
+            if throttled_binary[0] == '1':
                 state = UI.UnderVoltage
         except Exception:
             return state
