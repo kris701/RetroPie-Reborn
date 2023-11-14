@@ -50,6 +50,7 @@ class BatteryIconRunner():
 
     def GetBatteryState(self) -> BI:
         voltage = self.GetBatteryVoltage()
+        print(voltage)
         if voltage >= self._chargeVoltage:
             state : BI = BI.BatteryAlert
             for v, s in self._ChargevoltageMap:
