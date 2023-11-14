@@ -18,7 +18,7 @@ class IconManager(object):
             return
         
         for name in self._processes:
-            self._processes[name].kill()
+            self._processes[name].terminate()
             self._processes[name].wait();
         self._processes = {}
 
