@@ -12,13 +12,13 @@ class FanIconRunner():
     _currentState : FI = FI.Hide
     _fanIconMap : dict = {
             50 : FI.Hide,
-            60 : FI.Hide,
+            60 : FI.FanOn,
             70 : FI.FanOn,
             80 : FI.FanAlert
         }
     _fanSpeedMap : dict = {
             50 : 0,
-            60 : 0,
+            60 : 50,
             70 : 75,
             80 : 100
         }
@@ -47,7 +47,7 @@ class FanIconRunner():
         return cpu.temperature
     
     def SetFanSpeed(self, currentTemp : float):
-        newSpeed : int = 50
+        newSpeed : int = 0
         for temp in self._fanSpeedMap:
             if temp > currentTemp:
                 break
