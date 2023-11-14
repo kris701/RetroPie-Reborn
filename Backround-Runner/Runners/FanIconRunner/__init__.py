@@ -12,13 +12,13 @@ class FanIconRunner():
     _currentState : FI = FI.Hide
     _fanIconMap : dict = {
             50 : FI.Hide,
-            60 : FI.FanOn,
+            60 : FI.Hide,
             70 : FI.FanOn,
             80 : FI.FanAlert
         }
     _fanSpeedMap : dict = {
             50 : 0,
-            60 : 50,
+            60 : 0,
             70 : 75,
             80 : 100
         }
