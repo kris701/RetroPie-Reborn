@@ -1,4 +1,4 @@
 class PerformanceIcons():
     Hide = "Hide"
-    Capped = "/home/pi/RetroPie-Reborn/Backround-Runner/Runners/PerformanceIconRunner/Icons/thermometer.png"
-    Throttled = "/home/pi/RetroPie-Reborn/Backround-Runner/Runners/PerformanceIconRunner/Icons/thermometer-lines.png"
+    Capped = "RetroPie-Reborn/Backround-Runner/Runners/PerformanceIconRunner/Icons/thermometer.png"
+    Throttled = "RetroPie-Reborn/Backround-Runner/Runners/PerformanceIconRunner/Icons/thermometer-lines.png"
