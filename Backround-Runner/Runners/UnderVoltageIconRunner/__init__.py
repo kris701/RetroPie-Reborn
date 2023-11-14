@@ -19,9 +19,12 @@ class UnderVoltageIconRunner():
     
     def GetFrequencyState(self) -> float:
         state = UI.Hide
-        val=int(re.search("throttled=(0x\d+)", subprocess.check_output(self._envCmd.split()).decode().rstrip()).groups()[0], 16)
-        underVoltaged : bool = bool(val & 0x01)
-        if underVoltaged:
-            state = UI.UnderVoltage
+        try:
+            val=int(re.search("throttled=(0x\d+)", subprocess.check_output(self._envCmd.split()).decode().rstrip()).groups()[0], 16)
+            underVoltaged : bool = bool(val & 0x01)
+            if underVoltaged:
+                state = UI.UnderVoltage
+        except Exception:
+            return state
         return state
     

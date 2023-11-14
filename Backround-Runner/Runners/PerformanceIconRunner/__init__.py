@@ -19,13 +19,16 @@ class PerformanceIconRunner():
     
     def GetFrequencyState(self) -> float:
         state = PI.Hide
-        val=int(re.search("throttled=(0x\d+)", subprocess.check_output(self._envCmd.split()).decode().rstrip()).groups()[0], 16)
-        freqCap : bool = bool(val & 0x02)
-        throttled : bool = bool(val & 0x04)
-        if freqCap:
-            state = PI.Capped
-        if throttled:
-            state = PI.Throttled
+        try:
+            val=int(re.search("throttled=(0x\d+)", subprocess.check_output(self._envCmd.split()).decode().rstrip()).groups()[0], 16)
+            freqCap : bool = bool(val & 0x02)
+            throttled : bool = bool(val & 0x04)
+            if freqCap:
+                state = PI.Capped
+            if throttled:
+                state = PI.Throttled
+        except Exception:
+            return state
             
         return state
     
