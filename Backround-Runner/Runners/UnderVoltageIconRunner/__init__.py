@@ -20,7 +20,7 @@ class UnderVoltageIconRunner():
     def GetUnderVoltageState(self) -> float:
         state = UI.Hide
         try:
-            throttled_output = subprocess.check_output(self._envCmd, shell=True)
+            throttled_output = subprocess.check_output(self._envCmd, shell=True, timeout=1)
             throttled_binary = bin(int(throttled_output.split(b'=')[1], 0)) 
             if throttled_binary[0] == '1':
                 state = UI.UnderVoltage

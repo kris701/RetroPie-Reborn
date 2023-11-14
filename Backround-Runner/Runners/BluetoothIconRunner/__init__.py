@@ -21,7 +21,7 @@ class BluetoothIconRunner():
     def GetBluetoothState(self) -> BI:
         new_bt_state : BI = BI.Hide
         try:
-            stdoutdata = subprocess.getoutput("hcitool con")
+            stdoutdata = subprocess.getoutput("hcitool con", timeout=1)
             if "XX:XX:XX:XX:XX:XX" in stdoutdata.split():
                 new_bt_state = BI.Connected
         except Exception:
