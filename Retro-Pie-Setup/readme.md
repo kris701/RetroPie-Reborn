@@ -40,3 +40,18 @@ hdmi_drive=2
 7. Add `disable_splash=1` at the end of the file
 8. Save and exit
 9. Reboot
+
+# Add custom bootscreen (Assuming this repo is in home)
+1. F4 to exit emulationstation to the console
+2. Type `cp RetroPie-Reborn/Bootscreens/bootscreen_short.mp4 RetroPie/splashscreens/video/bootscreen_short.mp4`
+3. Go back to the emulationstation
+4. Go to settings
+5. Go to retropie settings
+6. Select a custom splashscreen, being the MP4 file
+7. Reboot
+
+# Run the background runner at boot (Assuming this repo is in home)
+1. F4 to exit emulationstation to the console
+2. Type `crontab -e`
+3. Go to the end of the file, and write `@reboot sleep 10 && python3 RetroPie-Reborn/Backround-Runner/Backround_Runner.py`
+4. Reboot
