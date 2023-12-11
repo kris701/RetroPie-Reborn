@@ -27,5 +27,8 @@
     <ClInclude Include="__vm\.Controller-Code.vsarduino.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="defaultController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

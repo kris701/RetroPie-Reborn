@@ -94,13 +94,14 @@
     <ProjectCapability Include="VisualMicro" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="defaultController.h" />
     <ClInclude Include="__vm\.Controller-Code.vsarduino.h" />
   </ItemGroup>
   <PropertyGroup>
     <DebuggerFlavor>VisualMicroDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(ProjectDir)..\..\..\..\..\..\AppData\Local\Arduino15\packages\teensy\hardware\avr\1.58.1\libraries\Bounce;$(ProjectDir)..\..\..\..\..\..\AppData\Local\Arduino15\packages\teensy\hardware\avr\1.58.1\libraries\Bounce\utility;$(ProjectDir)..\..\..\..\..\..\..\..\\Users\\kris7\\AppData\\Local\\Arduino15\\packages\\teensy\\hardware\\avr\\1.58.1\\cores\\teensy;$(ProjectDir)..\..\..\..\..\..\appdata\local\arduino15\packages\teensy\tools\teensy-compile\11.3.1\avr\lib\gcc\avr\7.3.0\include;$(ProjectDir)..\..\..\..\..\..\appdata\local\arduino15\packages\teensy\tools\teensy-compile\11.3.1\avr\lib\gcc\avr\7.3.0\include-fixed;$(ProjectDir)..\..\..\..\..\..\appdata\local\arduino15\packages\teensy\tools\teensy-compile\11.3.1\avr\avr\include;$(ProjectDir)..\..\..\..\..\..\AppData\Local\Arduino15\packages\teensy\hardware\avr\1.58.1\libraries\Bounce</IncludePath>
+    <IncludePath>$(ProjectDir)..\Controller-Code;$(ProjectDir)..\..\..\..\..\..\AppData\Local\Arduino15\packages\teensy\hardware\avr\1.58.1\libraries\Bounce;$(ProjectDir)..\..\..\..\..\..\AppData\Local\Arduino15\packages\teensy\hardware\avr\1.58.1\libraries\Bounce\utility;$(ProjectDir)..\..\..\..\..\..\..\..\\Users\\kris7\\AppData\\Local\\Arduino15\\packages\\teensy\\hardware\\avr\\1.58.1\\cores\\teensy;$(ProjectDir)..\..\..\..\..\..\appdata\local\arduino15\packages\teensy\tools\teensy-compile\11.3.1\avr\lib\gcc\avr\7.3.0\include;$(ProjectDir)..\..\..\..\..\..\appdata\local\arduino15\packages\teensy\tools\teensy-compile\11.3.1\avr\lib\gcc\avr\7.3.0\include-fixed;$(ProjectDir)..\..\..\..\..\..\appdata\local\arduino15\packages\teensy\tools\teensy-compile\11.3.1\avr\avr\include;$(ProjectDir)..\..\..\..\..\..\AppData\Local\Arduino15\packages\teensy\hardware\avr\1.58.1\libraries\Bounce</IncludePath>
     <RemoteCCompileToolExe>$(ProjectDir)..\..\..\..\..\..\..\..\\Users\\kris7\\AppData\\Local\\Arduino15\\packages\\teensy\\tools\\teensy-compile\\11.3.1\avr\bin\avr-g++</RemoteCCompileToolExe>
     <RemoteCppCompileToolExe>$(ProjectDir)..\..\..\..\..\..\..\..\\Users\\kris7\\AppData\\Local\\Arduino15\\packages\\teensy\\tools\\teensy-compile\\11.3.1\avr\bin\avr-g++</RemoteCppCompileToolExe>
     <ValidateArchitecture>false</ValidateArchitecture>
@@ -113,7 +114,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\..\..\AppData\Local\Arduino15\packages\teensy\hardware\avr\1.58.1\libraries\Bounce;$(ProjectDir)..\..\..\..\..\..\AppData\Local\Arduino15\packages\teensy\hardware\avr\1.58.1\libraries\Bounce\utility;$(ProjectDir)..\..\..\..\..\..\..\..\\Users\\kris7\\AppData\\Local\\Arduino15\\packages\\teensy\\hardware\\avr\\1.58.1\\cores\\teensy;$(ProjectDir)..\..\..\..\..\..\appdata\local\arduino15\packages\teensy\tools\teensy-compile\11.3.1\avr\lib\gcc\avr\7.3.0\include;$(ProjectDir)..\..\..\..\..\..\appdata\local\arduino15\packages\teensy\tools\teensy-compile\11.3.1\avr\lib\gcc\avr\7.3.0\include-fixed;$(ProjectDir)..\..\..\..\..\..\appdata\local\arduino15\packages\teensy\tools\teensy-compile\11.3.1\avr\avr\include;$(ProjectDir)..\..\..\..\..\..\AppData\Local\Arduino15\packages\teensy\hardware\avr\1.58.1\libraries\Bounce;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\Controller-Code;$(ProjectDir)..\..\..\..\..\..\AppData\Local\Arduino15\packages\teensy\hardware\avr\1.58.1\libraries\Bounce;$(ProjectDir)..\..\..\..\..\..\AppData\Local\Arduino15\packages\teensy\hardware\avr\1.58.1\libraries\Bounce\utility;$(ProjectDir)..\..\..\..\..\..\..\..\\Users\\kris7\\AppData\\Local\\Arduino15\\packages\\teensy\\hardware\\avr\\1.58.1\\cores\\teensy;$(ProjectDir)..\..\..\..\..\..\appdata\local\arduino15\packages\teensy\tools\teensy-compile\11.3.1\avr\lib\gcc\avr\7.3.0\include;$(ProjectDir)..\..\..\..\..\..\appdata\local\arduino15\packages\teensy\tools\teensy-compile\11.3.1\avr\lib\gcc\avr\7.3.0\include-fixed;$(ProjectDir)..\..\..\..\..\..\appdata\local\arduino15\packages\teensy\tools\teensy-compile\11.3.1\avr\avr\include;$(ProjectDir)..\..\..\..\..\..\AppData\Local\Arduino15\packages\teensy\hardware\avr\1.58.1\libraries\Bounce;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <GccToolChain>$(ProjectDir)..\..\..\..\..\..\..\..\\Users\\kris7\\AppData\\Local\\Arduino15\\packages\\teensy\\tools\\teensy-compile\\11.3.1\avr\bin\avr-g++</GccToolChain>
       <CppLanguageStandard>gnu++11</CppLanguageStandard>
       <CLanguageStandard>gnu11</CLanguageStandard>

@@ -1,44 +1,13 @@
 #include <Bounce.h>
+#include "defaultController.h"
 
 #define ARRAY_SIZE(a) (sizeof(a) / sizeof(a[0]))
-
-// The first number corresponds to the pin number and the second number to the button number. See https://www.pjrc.com/teensy/td_joystick.html for more information.
-const uint8_t buttonsMap[][2] = {
-  {8, 1},   // L3
-  {11, 2},  // R3
-  {16, 3},  // Sqare
-  {15, 4},  // Circle
-  {14, 5},  // Triangle
-  {13, 6},  // Cross
-  {17, 7},  // R1
-  {12, 8},  // R2
-  {6, 9},   // L1
-  {7, 10},  // L2
-  {5, 11},  // SELECT
-  {1, 12},  // START
-  {10, 13}, // AUX1
-  {23, 14}, // AUX2
-};
-
 const int buttonsMapSize = ARRAY_SIZE(buttonsMap);
-
+const int dpadButtonsSize = ARRAY_SIZE(dpadMap);
 Bounce* buttons[buttonsMapSize];
-
-// Pin numbers used by the dpad
-const uint8_t down = 2;
-const uint8_t right = 0;
-const uint8_t up = 4;
-const uint8_t left = 3;
-
-const uint8_t dpadButtons[] = { up, right, down, left };
-
-const int dpadButtonsSize = ARRAY_SIZE(dpadButtons);
+Bounce* dpadButtons[dpadButtonsSize];
 
 void setup() {
-
-    // configure the joystick to manual send mode.  This gives precise
-    // control over when the computer receives updates, but it does
-    // require you to manually call Joystick.send_now().
     Joystick.useManualSend(true);
 
     for (int i = 0; i < buttonsMapSize; ++i) {
@@ -47,18 +16,30 @@ void setup() {
         pinMode(pin, INPUT_PULLUP);
     }
     for (int i = 0; i < dpadButtonsSize; ++i) {
-        pinMode(dpadButtons[i], INPUT_PULLUP);
+        const uint8_t pin = dpadMap[i];
+        dpadButtons[i] = new Bounce(pin, 10);
+        pinMode(pin, INPUT_PULLUP);
     }
 }
 
 void loop() {
-    // read 6 analog inputs and use them for the joystick axis
-    Joystick.X(analogRead(2));
-    // we need to invert the y axis
-    Joystick.Y(1023 - analogRead(3));
-    Joystick.Z(analogRead(0));
-    Joystick.Zrotate(analogRead(1));
+    handleAnalog();
+    handleButtons();
+    Joystick.hat(handleDpad());
+    Joystick.send_now();
+    delay(50);
+}
 
+void handleAnalog() {
+    // read 6 analog inputs and use them for the joystick axis
+    Joystick.X(analogRead(axisXPlus));
+    // we need to invert the y axis
+    Joystick.Y(1023 - analogRead(axisXMinus));
+    Joystick.Z(analogRead(axisYPlus));
+    Joystick.Zrotate(analogRead(axisYMinus));
+}
+
+void handleButtons() {
     // read digital pins and use them for the buttons
     for (int i = 0; i < buttonsMapSize; ++i) {
         const uint8_t* buttonMapping = buttonsMap[i];
@@ -72,10 +53,15 @@ void loop() {
             Joystick.button(buttonMapping[1], 0);
         }
     }
+}
 
+int handleDpad() {
     uint8_t dpadValue = 0;
     for (int i = 0; i < dpadButtonsSize; ++i) {
-        const int value = !digitalRead(dpadButtons[i]);
+        dpadButtons[i]->update();
+        int value = 0;
+        if (dpadButtons[i]->fallingEdge())
+            value = 1;
         dpadValue |= value << i;
     }
 
@@ -110,8 +96,5 @@ void loop() {
         angle = 315;
         break;
     }
-
-    Joystick.hat(angle);
-    Joystick.send_now();
-    delay(50);
+    return angle;
 }
