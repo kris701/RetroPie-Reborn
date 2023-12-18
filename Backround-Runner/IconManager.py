@@ -18,12 +18,12 @@ class IconManager(object):
         if self._changed == False:
             return
         
+        print("update")
         self._process.terminate()
         self._process.wait();
         
         images = []
         for name in self._currents:
-            print(name)
             images.append(Image.open(self._currents[name]))
         widths, heights = zip(*(i.size for i in images))
 
