@@ -36,8 +36,8 @@ class FanIconRunner():
             if temp > currentTemp:
                 break;
             newState = self._fanIconMap[temp]
+        self.SetFanSpeed(currentTemp)
         if self._currentState != newState:
-            self.SetFanSpeed(currentTemp)
             self._currentState = newState
             iconManager.RemoveIcon(self.IconName);
             iconManager.AddIcon(newState, self.IconName)    
