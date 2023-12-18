@@ -12,15 +12,16 @@ class IconManager(object):
     Margin : int = 5
 
     _currents : dict = {}
-    _process : subprocess.Popen
+    _process : subprocess.Popen = None
     _changed : bool = False
 
     def Update(self) -> None:
         if self._changed == False:
             return
         
-        self._process.terminate()
-        self._process.wait();
+        if self._process is not None:
+            self._process.terminate()
+            self._process.wait();
         
         images = []
         for name in self._currents:
