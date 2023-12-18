@@ -15,10 +15,10 @@ class IconManager(object):
     _changed : bool = False
 
     def Update(self) -> None:
+        print("update")
         if self._changed == False:
             return
         
-        print("update")
         self._process.terminate()
         self._process.wait();
         
@@ -49,11 +49,13 @@ class IconManager(object):
             self.RemoveIcon(name)
         elif name not in self._currents:
             if os.path.exists(str(icon)):
+                print("added")
                 self._currents[name] = icon
                 self._changed = True
         
     def RemoveIcon(self, name : str) -> None:
         if name in self._currents:
+            print("removed")
             self._currents.pop(name)
             self._changed = True
             
