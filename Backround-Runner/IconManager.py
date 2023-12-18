@@ -23,6 +23,7 @@ class IconManager(object):
         
         images = []
         for name in self._currents:
+            print(name)
             images.append(Image.open(self._currents[name]))
         widths, heights = zip(*(i.size for i in images))
 
