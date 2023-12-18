@@ -14,5 +14,4 @@
 * 5v Fan: ![image](https://github.com/kris701/RetroPie-Reborn/assets/22596587/9b841af1-a5f9-45cd-9f97-19f0285118de)
 * PAM8403: ![image](https://github.com/kris701/RetroPie-Reborn/assets/22596587/ce28f3f8-1561-48b7-89a5-475d21f9abe7)
 * 8 Ohm Speaker: ![image](https://github.com/kris701/RetroPie-Reborn/assets/22596587/b29ac880-4dd3-4294-9454-0ff9f6b3fd1d)
-* 2x 6 axis Thumb Sticks: ![image](https://github.com/kris701/RetroPie-Reborn/assets/22596587/bf0b91da-b609-4924-85a0-74381209f995)
-* Broken PS1 controller for buttons
+
