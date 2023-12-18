@@ -31,7 +31,7 @@ class IconManager(object):
         self._changed = False
     
     def AddIcon(self, icon, name : str) -> None:
-        if icon is "Hide":
+        if str(icon) is "Hide":
             self.RemoveIcon(name)
         elif name not in self._processes:
             if os.path.exists(str(icon)):
