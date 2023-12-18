@@ -12,6 +12,7 @@ class IconManager(object):
     Margin : int = 5
 
     _currents : dict = {}
+    _process : subprocess.Popen
     _changed : bool = False
 
     def Update(self) -> None:
@@ -47,15 +48,12 @@ class IconManager(object):
         if str(icon) is "Hide":
             self.RemoveIcon(name)
         elif name not in self._currents:
-            print("add:")
-            print(name)
             if os.path.exists(str(icon)):
                 self._currents[name] = icon
                 self._changed = True
         
     def RemoveIcon(self, name : str) -> None:
         if name in self._currents:
-            print("removed")
             self._currents.pop(name)
             self._changed = True
             
