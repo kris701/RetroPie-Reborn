@@ -7,25 +7,14 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Controller-Code", "Controll
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Retro-Pie-Setup", "Retro-Pie-Setup", "{8F8DCC40-C1E7-4271-AA99-BB1E1A62544D}"
 	ProjectSection(SolutionItems) = preProject
-		Retro-Pie-Setup\misc retropie configuration setups.txt = Retro-Pie-Setup\misc retropie configuration setups.txt
+		Retro-Pie-Setup\readme.md = Retro-Pie-Setup\readme.md
 	EndProjectSection
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Backround-Runner", "Backround-Runner\Backround-Runner.pyproj", "{EDED5C9C-08A6-4C1C-B575-C9C097511F77}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EAGLE-Files", "EAGLE-Files", "{DFFDED86-EBC4-4560-ACB6-39D50B7F512F}"
 	ProjectSection(SolutionItems) = preProject
-		EAGLE-Files\DPad-Buttons.brd = EAGLE-Files\DPad-Buttons.brd
-		EAGLE-Files\DPad-Buttons.sch = EAGLE-Files\DPad-Buttons.sch
-		EAGLE-Files\Fan-Controller.brd = EAGLE-Files\Fan-Controller.brd
-		EAGLE-Files\Fan-Controller.sch = EAGLE-Files\Fan-Controller.sch
-		EAGLE-Files\Four-Buttons.brd = EAGLE-Files\Four-Buttons.brd
-		EAGLE-Files\Four-Buttons.sch = EAGLE-Files\Four-Buttons.sch
-		EAGLE-Files\Power-Bus.brd = EAGLE-Files\Power-Bus.brd
-		EAGLE-Files\Power-Bus.sch = EAGLE-Files\Power-Bus.sch
-		EAGLE-Files\Raspberry-Pi-Header.brd = EAGLE-Files\Raspberry-Pi-Header.brd
-		EAGLE-Files\Raspberry-Pi-Header.sch = EAGLE-Files\Raspberry-Pi-Header.sch
-		EAGLE-Files\Two-Buttons.brd = EAGLE-Files\Two-Buttons.brd
-		EAGLE-Files\Two-Buttons.sch = EAGLE-Files\Two-Buttons.sch
+		EAGLE-Files\readme.md = EAGLE-Files\readme.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Parts", "Parts", "{BD6E8678-4D22-46DF-9BAA-F7FAA22776CF}"
@@ -35,15 +24,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Parts", "Parts", "{BD6E8678
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3D-Print-Files", "3D-Print-Files", "{28894E59-7BD6-4CAC-9A24-C4EFB3B62F37}"
 	ProjectSection(SolutionItems) = preProject
-		3D-Print-Files\InnerBracket.f3d = 3D-Print-Files\InnerBracket.f3d
-		3D-Print-Files\Shell.f3d = 3D-Print-Files\Shell.f3d
+		3D-Print-Files\readme.md = 3D-Print-Files\readme.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bootscreens", "Bootscreens", "{42778C46-D25B-4C0C-865A-06A7C2FBABE6}"
 	ProjectSection(SolutionItems) = preProject
-		Bootscreens\bootscreen.aep = Bootscreens\bootscreen.aep
-		Bootscreens\bootscreen.mp4 = Bootscreens\bootscreen.mp4
-		Bootscreens\loading.png = Bootscreens\loading.png
+		Bootscreens\readme.md = Bootscreens\readme.md
 	EndProjectSection
 EndProject
 Global
