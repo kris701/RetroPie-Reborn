@@ -15,7 +15,6 @@ class IconManager(object):
     _changed : bool = False
 
     def Update(self) -> None:
-        print("update")
         if self._changed == False:
             return
         
@@ -45,11 +44,12 @@ class IconManager(object):
         self._changed = False
     
     def AddIcon(self, icon, name : str) -> None:
+        print("add:")
+        print(name)
         if str(icon) is "Hide":
             self.RemoveIcon(name)
         elif name not in self._currents:
             if os.path.exists(str(icon)):
-                print("added")
                 self._currents[name] = icon
                 self._changed = True
         
