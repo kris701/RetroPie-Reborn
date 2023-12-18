@@ -12,7 +12,7 @@ class IconManager(object):
     Margin : int = 5
 
     _currents : dict = {}
-    _process
+    _process : subprocess.Popen
     _changed : bool = False
 
     def Update(self) -> None:
