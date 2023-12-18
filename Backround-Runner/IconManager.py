@@ -44,11 +44,11 @@ class IconManager(object):
         self._changed = False
     
     def AddIcon(self, icon, name : str) -> None:
-        print("add:")
-        print(name)
         if str(icon) is "Hide":
             self.RemoveIcon(name)
         elif name not in self._currents:
+            print("add:")
+            print(name)
             if os.path.exists(str(icon)):
                 self._currents[name] = icon
                 self._changed = True
