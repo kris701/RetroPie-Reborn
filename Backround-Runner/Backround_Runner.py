@@ -7,6 +7,7 @@ from Runners.PerformanceIconRunner import PerformanceIconRunner as PIR
 from Runners.BatteryIconRunner import BatteryIconRunner as BaIR
 from Runners.FanIconRunner import FanIconRunner as FIR
 from Runners.UnderVoltageIconRunner import UnderVoltageIconRunner as UVIR
+from Runners.DownloadingIconRunner import DownloadingIconRunner as DIR
 
 iconManager : IM = IM()
 wifiIconRunner : WIR = WIR()
@@ -15,6 +16,7 @@ performanceIconRunner : PIR = PIR()
 batteryIconRunner : BaIR = BaIR()
 fanIconRunner : FIR = FIR()
 underVoltageIconRunner : UVIR = UVIR()
+downloadingIconRunner : DIR = DIR()
 
 while True:
     wifiIconRunner.Update(iconManager)
@@ -23,7 +25,8 @@ while True:
     batteryIconRunner.Update(iconManager)
     fanIconRunner.Update(iconManager)
     underVoltageIconRunner.Update(iconManager)
+    downloadingIconRunner.Update(iconManager)
     
     iconManager.Update()
 
-    time.sleep(5)
+    time.sleep(2)

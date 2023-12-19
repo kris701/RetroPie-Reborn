@@ -21,13 +21,14 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Backround_Runner_old.py" />
     <Compile Include="Backround_Runner.py" />
     <Compile Include="IconManager.py" />
     <Compile Include="Runners\BatteryIconRunner\BatteryIcons.py" />
     <Compile Include="Runners\BatteryIconRunner\__init__.py" />
     <Compile Include="Runners\BluetoothIconRunner\BluetoothIcons.py" />
     <Compile Include="Runners\BluetoothIconRunner\__init__.py" />
+    <Compile Include="Runners\DownloadingIconRunner\DownloadingIcons.py" />
+    <Compile Include="Runners\DownloadingIconRunner\__init__.py" />
     <Compile Include="Runners\FanIconRunner\FanIcons.py" />
     <Compile Include="Runners\FanIconRunner\__init__.py" />
     <Compile Include="Runners\PerformanceIconRunner\PerformanceIcons.py" />
@@ -52,6 +53,7 @@
     <Content Include="Runners\BatteryIconRunner\Icons\ic_battery_alert_red_white_36dp.png" />
     <Content Include="Runners\BluetoothIconRunner\Icons\bluetooth-connected.png" />
     <Content Include="Runners\BluetoothIconRunner\Icons\bluetooth-searching.png" />
+    <Content Include="Runners\DownloadingIconRunner\Icons\download-box.png" />
     <Content Include="Runners\FanIconRunner\Icons\fan-alert.png" />
     <Content Include="Runners\FanIconRunner\Icons\fan-on.png" />
     <Content Include="Runners\FanIconRunner\Icons\fan-speed-1.png" />
@@ -69,8 +71,10 @@
     <Folder Include="Runners\BluetoothIconRunner\" />
     <Folder Include="Runners\BatteryIconRunner\" />
     <Folder Include="Runners\BluetoothIconRunner\Icons\" />
+    <Folder Include="Runners\DownloadingIconRunner\Icons\" />
     <Folder Include="Runners\FanIconRunner\" />
     <Folder Include="Runners\FanIconRunner\Icons\" />
+    <Folder Include="Runners\DownloadingIconRunner\" />
     <Folder Include="Runners\UnderVoltageIconRunner\" />
     <Folder Include="Runners\PerformanceIconRunner\" />
     <Folder Include="Runners\PerformanceIconRunner\Icons\" />
