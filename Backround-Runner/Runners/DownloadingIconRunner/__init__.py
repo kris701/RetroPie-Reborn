@@ -6,7 +6,7 @@ from .DownloadingIcons import DownloadingIcons as DI
 class DownloadingIconRunner():
     IconName : str = "Downloading"
 
-    _cmd = "ifstat 0.5s 1 | awk 'NR==3 {print $1}'"
+    _cmd = "ifstat -i wlan0 0.5s 1 | awk 'NR==3 {print $1}'"
 
     _currentState : DI = DI.Hide
     def Update(self, iconManager) -> None:
