@@ -16,11 +16,11 @@ class BatteryIconRunner():
     _avgList : list = []
     
     _voltageMap : dict = {
-            2.55: BI.BatteryAlert,
-            2.60: BI.Battery20,
-            2.65: BI.Battery40,
-            2.70: BI.Battery60,
-            2.80: BI.Battery80,
+            2.65: BI.BatteryAlert,
+            2.70: BI.Battery20,
+            2.75: BI.Battery40,
+            2.80: BI.Battery60,
+            2.85: BI.Battery80,
             2.90: BI.Battery100,
         }
         

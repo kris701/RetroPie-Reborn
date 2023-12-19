@@ -27,6 +27,8 @@
     <Compile Include="Runners\BatteryIconRunner\__init__.py" />
     <Compile Include="Runners\BluetoothIconRunner\BluetoothIcons.py" />
     <Compile Include="Runners\BluetoothIconRunner\__init__.py" />
+    <Compile Include="Runners\TimeIconRunner\TimeIcons.py" />
+    <Compile Include="Runners\TimeIconRunner\__init__.py" />
     <Compile Include="Runners\DownloadingIconRunner\DownloadingIcons.py" />
     <Compile Include="Runners\DownloadingIconRunner\__init__.py" />
     <Compile Include="Runners\FanIconRunner\FanIcons.py" />
@@ -59,6 +61,17 @@
     <Content Include="Runners\FanIconRunner\Icons\fan-speed-1.png" />
     <Content Include="Runners\FanIconRunner\Icons\fan-speed-2.png" />
     <Content Include="Runners\FanIconRunner\Icons\fan-speed-3.png" />
+    <Content Include="Runners\TimeIconRunner\Icons\seperator.png" />
+    <Content Include="Runners\TimeIconRunner\Icons\numeric-0-custom.png" />
+    <Content Include="Runners\TimeIconRunner\Icons\numeric-1-custom.png" />
+    <Content Include="Runners\TimeIconRunner\Icons\numeric-2-custom.png" />
+    <Content Include="Runners\TimeIconRunner\Icons\numeric-3-custom.png" />
+    <Content Include="Runners\TimeIconRunner\Icons\numeric-4-custom.png" />
+    <Content Include="Runners\TimeIconRunner\Icons\numeric-5-custom.png" />
+    <Content Include="Runners\TimeIconRunner\Icons\numeric-6-custom.png" />
+    <Content Include="Runners\TimeIconRunner\Icons\numeric-7-custom.png" />
+    <Content Include="Runners\TimeIconRunner\Icons\numeric-8-custom.png" />
+    <Content Include="Runners\TimeIconRunner\Icons\numeric-9-custom.png" />
     <Content Include="Runners\UnderVoltageIconRunner\Icons\under-voltaged.png" />
     <Content Include="Runners\PerformanceIconRunner\Icons\thermometer-lines.png" />
     <Content Include="Runners\PerformanceIconRunner\Icons\thermometer.png" />
@@ -71,6 +84,8 @@
     <Folder Include="Runners\BluetoothIconRunner\" />
     <Folder Include="Runners\BatteryIconRunner\" />
     <Folder Include="Runners\BluetoothIconRunner\Icons\" />
+    <Folder Include="Runners\TimeIconRunner\" />
+    <Folder Include="Runners\TimeIconRunner\Icons\" />
     <Folder Include="Runners\DownloadingIconRunner\Icons\" />
     <Folder Include="Runners\FanIconRunner\" />
     <Folder Include="Runners\FanIconRunner\Icons\" />
