@@ -16,12 +16,12 @@ class BatteryIconRunner():
     _avgList : list = []
     
     _voltageMap : dict = {
-            2.80: BI.BatteryAlert,
-            2.85: BI.Battery20,
-            2.90: BI.Battery40,
-            2.95: BI.Battery60,
-            3.00: BI.Battery80,
-            3.10: BI.Battery100,
+            2.55: BI.BatteryAlert,
+            2.60: BI.Battery20,
+            2.65: BI.Battery40,
+            2.70: BI.Battery60,
+            2.80: BI.Battery80,
+            2.90: BI.Battery100,
         }
         
     def Update(self, iconManager) -> None:
