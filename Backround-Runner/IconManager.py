@@ -7,7 +7,6 @@ from PIL import Image
 class IconManager(object):
     PngviewPath : str = "/usr/local/bin/pngview"
     PngviewCall=[PngviewPath, "-d", "0", "-b", "0x0000", "-n", "-l", "15000", "-y", "0", "-x"]
-    IconOffset : int = 24
     Resolution : int = 1024
     Margin : int = 5
 
@@ -40,7 +39,7 @@ class IconManager(object):
 
         new_im.save('temp.png', 'PNG')
             
-        offset = self.Resolution - len(images) * (self.Margin + self.IconOffset)
+        offset = self.Resolution - total_width + self.Margin
         self._process = subprocess.Popen(self.PngviewCall + [str(offset), str("temp.png")])
 
         self._changed = False
