@@ -1,6 +1,7 @@
 from enum import Enum
 import os
 import subprocess
+import statistics
 from gpiozero import CPUTemperature
 from RPi import GPIO
 
@@ -9,6 +10,7 @@ from .FanIcons import FanIcons as FI
 class FanIconRunner():
     IconName : str = "Fan"
 
+    _avgList : list = []
     _currentState : FI = FI.Hide
     _fanIconMap : dict = {
             50 : FI.Hide,
@@ -30,7 +32,7 @@ class FanIconRunner():
         self._pwm.start(0)
 
     def Update(self, iconManager) -> None:
-        currentTemp : float = self.GetCPUTemperature()
+        currentTemp : float = self.GetGetCPUTemperature()
         newState = FI.Hide
         for temp in self._fanIconMap:
             if temp > currentTemp:
@@ -42,10 +44,6 @@ class FanIconRunner():
             iconManager.RemoveIcon(self.IconName);
             iconManager.AddIcon(newState, self.IconName)    
     
-    def GetCPUTemperature(self) -> float:
-        cpu = CPUTemperature()
-        return cpu.temperature
-    
     def SetFanSpeed(self, currentTemp : float):
         newSpeed : int = 0
         for temp in self._fanSpeedMap:
@@ -55,3 +53,8 @@ class FanIconRunner():
 
         self._pwm.ChangeDutyCycle(newSpeed)
     
+    def GetGetCPUTemperature(self) -> float:
+        self._avgList.append(CPUTemperature().temperature)
+        if len(self._avgList) > 5:
+            self._avgList.pop(0)
+        return statistics.mean(self._avgList)
