@@ -39,7 +39,7 @@ class IconManager(object):
 
         new_im.save('temp.png', 'PNG')
             
-        offset = self.Resolution - total_width + self.Margin
+        offset = self.Resolution - total_width - self.Margin
         self._process = subprocess.Popen(self.PngviewCall + [str(offset), str("temp.png")])
 
         self._changed = False
