@@ -44,5 +44,5 @@ class BatteryIconRunner():
     def GetBatteryVoltage(self) -> float:
         self._avgList.append(self._chan.voltage)
         if len(self._avgList) > 10:
-            self._avgList.pop()
+            self._avgList.pop(0)
         return statistics.mean(self._avgList)
