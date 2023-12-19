@@ -13,16 +13,16 @@ class FanIconRunner():
     _avgList : list = []
     _currentState : FI = FI.Hide
     _fanIconMap : dict = {
-            50 : FI.Hide,
-            60 : FI.FanSpeed1,
-            70 : FI.FanSpeed2,
-            80 : FI.FanAlert
+            70 : FI.Hide,
+            75 : FI.FanSpeed1,
+            80 : FI.FanSpeed2,
+            85 : FI.FanAlert
         }
     _fanSpeedMap : dict = {
-            50 : 0,
-            60 : 50,
-            70 : 75,
-            80 : 100
+            70 : 0,
+            75 : 50,
+            80 : 75,
+            85 : 100
         }
 
     def __init__(self) -> None:
