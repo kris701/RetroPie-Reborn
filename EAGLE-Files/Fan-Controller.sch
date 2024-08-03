@@ -4982,7 +4982,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/2" value="10k"/>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="FAN" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="/90" package3d_urn="urn:adsk.eagle:package:22437/2"/>
-<part name="CONTROL" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="/90" package3d_urn="urn:adsk.eagle:package:22459/2"/>
+<part name="IN" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="/90" package3d_urn="urn:adsk.eagle:package:22459/2"/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="P+4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
@@ -5014,7 +5014,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <attribute name="NAME" x="57.785" y="39.37" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="68.58" y="39.37" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="CONTROL" gate="A" x="38.1" y="45.72" smashed="yes" rot="R90">
+<instance part="IN" gate="A" x="38.1" y="45.72" smashed="yes" rot="R90">
 <attribute name="NAME" x="32.385" y="39.37" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="45.72" y="39.37" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -5041,7 +5041,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <wire x1="38.1" y1="12.7" x2="38.1" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="CONTROL" gate="A" pin="3"/>
+<pinref part="IN" gate="A" pin="3"/>
 <pinref part="GND4" gate="1" pin="GND"/>
 <wire x1="40.64" y1="43.18" x2="40.64" y2="38.1" width="0.1524" layer="91"/>
 </segment>
@@ -5056,7 +5056,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <net name="+5V" class="0">
 <segment>
 <pinref part="P+3" gate="1" pin="+5V"/>
-<pinref part="CONTROL" gate="A" pin="1"/>
+<pinref part="IN" gate="A" pin="1"/>
 <wire x1="35.56" y1="38.1" x2="35.56" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -5079,7 +5079,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <wire x1="38.1" y1="27.94" x2="40.64" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="25.4" x2="38.1" y2="27.94" width="0.1524" layer="91"/>
 <junction x="38.1" y="27.94"/>
-<pinref part="CONTROL" gate="A" pin="2"/>
+<pinref part="IN" gate="A" pin="2"/>
 <wire x1="38.1" y1="43.18" x2="38.1" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 </net>
