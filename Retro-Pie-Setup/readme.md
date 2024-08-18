@@ -55,3 +55,10 @@ hdmi_drive=2
 2. Type `crontab -e`
 3. Go to the end of the file, and write `@reboot sleep 10 && python3 RetroPie-Reborn/Backround-Runner/Backround_Runner.py`
 4. Reboot
+
+# Run rclone every minute (if you have rclone setup)
+1. F4 to exit emulationstation to the console
+2. Type `crontab -e`
+3. Go to the end of the file, and write `* * * * * rclone sync /home/pi/RetroArch remote:"Real Documents/RetroArch"`
+4. Reboot
+
