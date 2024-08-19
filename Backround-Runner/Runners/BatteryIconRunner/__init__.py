@@ -17,11 +17,11 @@ class BatteryIconRunner():
     
     _voltageMap : dict = {
             2.90: BI.BatteryAlert,
-            3.10: BI.Battery20,
+            3.00: BI.Battery20,
             3.20: BI.Battery40,
-            3.50: BI.Battery60,
-            3.70: BI.Battery80,
-            3.90: BI.Battery100,
+            3.40: BI.Battery60,
+            3.60: BI.Battery80,
+            3.80: BI.Battery100,
         }
         
     def Update(self, iconManager) -> None:
