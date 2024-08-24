@@ -101,9 +101,9 @@
     <DebuggerFlavor>VisualMicroDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(ProjectDir)..\..\..\..\..\..\..\..\\Users\\kris7\\AppData\\Local\\Arduino15\\packages\\teensy\\hardware\\avr\\1.58.1\\cores\\teensy;$(ProjectDir)..\..\..\..\..\..\appdata\local\arduino15\packages\teensy\tools\teensy-compile\11.3.1\avr\lib\gcc\avr\7.3.0\include;$(ProjectDir)..\..\..\..\..\..\appdata\local\arduino15\packages\teensy\tools\teensy-compile\11.3.1\avr\lib\gcc\avr\7.3.0\include-fixed;$(ProjectDir)..\..\..\..\..\..\appdata\local\arduino15\packages\teensy\tools\teensy-compile\11.3.1\avr\avr\include;$(ProjectDir)..\..\..\..\..\..\AppData\Local\Arduino15\packages\teensy\hardware\avr\1.58.1\libraries\Bounce</IncludePath>
-    <RemoteCCompileToolExe>$(ProjectDir)..\..\..\..\..\..\..\..\\Users\\kris7\\AppData\\Local\\Arduino15\\packages\\teensy\\tools\\teensy-compile\\11.3.1\avr\bin\avr-g++</RemoteCCompileToolExe>
-    <RemoteCppCompileToolExe>$(ProjectDir)..\..\..\..\..\..\..\..\\Users\\kris7\\AppData\\Local\\Arduino15\\packages\\teensy\\tools\\teensy-compile\\11.3.1\avr\bin\avr-g++</RemoteCppCompileToolExe>
+    <IncludePath>c:\\Users\\kris7\\AppData\\Local\\Arduino15\\packages\\teensy\\hardware\\avr\\1.58.1\\cores\\teensy;c:\users\kris7\appdata\local\arduino15\packages\teensy\tools\teensy-compile\11.3.1\avr\lib\gcc\avr\7.3.0\include;c:\users\kris7\appdata\local\arduino15\packages\teensy\tools\teensy-compile\11.3.1\avr\lib\gcc\avr\7.3.0\include-fixed;c:\users\kris7\appdata\local\arduino15\packages\teensy\tools\teensy-compile\11.3.1\avr\avr\include;c:\Users\kris7\AppData\Local\Arduino15\packages\teensy\hardware\avr\1.58.1\libraries\Bounce</IncludePath>
+    <RemoteCCompileToolExe>c:\\Users\\kris7\\AppData\\Local\\Arduino15\\packages\\teensy\\tools\\teensy-compile\\11.3.1\avr\bin\avr-g++</RemoteCCompileToolExe>
+    <RemoteCppCompileToolExe>c:\\Users\\kris7\\AppData\\Local\\Arduino15\\packages\\teensy\\tools\\teensy-compile\\11.3.1\avr\bin\avr-g++</RemoteCppCompileToolExe>
     <ValidateArchitecture>false</ValidateArchitecture>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -114,13 +114,13 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\..\..\..\..\\Users\\kris7\\AppData\\Local\\Arduino15\\packages\\teensy\\hardware\\avr\\1.58.1\\cores\\teensy;$(ProjectDir)..\..\..\..\..\..\appdata\local\arduino15\packages\teensy\tools\teensy-compile\11.3.1\avr\lib\gcc\avr\7.3.0\include;$(ProjectDir)..\..\..\..\..\..\appdata\local\arduino15\packages\teensy\tools\teensy-compile\11.3.1\avr\lib\gcc\avr\7.3.0\include-fixed;$(ProjectDir)..\..\..\..\..\..\appdata\local\arduino15\packages\teensy\tools\teensy-compile\11.3.1\avr\avr\include;$(ProjectDir)..\..\..\..\..\..\AppData\Local\Arduino15\packages\teensy\hardware\avr\1.58.1\libraries\Bounce;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <GccToolChain>$(ProjectDir)..\..\..\..\..\..\..\..\\Users\\kris7\\AppData\\Local\\Arduino15\\packages\\teensy\\tools\\teensy-compile\\11.3.1\avr\bin\avr-g++</GccToolChain>
+      <AdditionalIncludeDirectories>c:\\Users\\kris7\\AppData\\Local\\Arduino15\\packages\\teensy\\hardware\\avr\\1.58.1\\cores\\teensy;c:\users\kris7\appdata\local\arduino15\packages\teensy\tools\teensy-compile\11.3.1\avr\lib\gcc\avr\7.3.0\include;c:\users\kris7\appdata\local\arduino15\packages\teensy\tools\teensy-compile\11.3.1\avr\lib\gcc\avr\7.3.0\include-fixed;c:\users\kris7\appdata\local\arduino15\packages\teensy\tools\teensy-compile\11.3.1\avr\avr\include;c:\Users\kris7\AppData\Local\Arduino15\packages\teensy\hardware\avr\1.58.1\libraries\Bounce;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <GccToolChain>c:\\Users\\kris7\\AppData\\Local\\Arduino15\\packages\\teensy\\tools\\teensy-compile\\11.3.1\avr\bin\avr-g++</GccToolChain>
       <CppLanguageStandard>gnu++11</CppLanguageStandard>
       <CLanguageStandard>gnu11</CLanguageStandard>
       <CAdditionalWarning />
       <CppAdditionalWarning />
-      <ForcedIncludeFiles>d:\program files\microsoft visual studio\2022\enterprise\common7\ide\extensions\k5efmrr3.kil\Micro Platforms\default\vm-intelli-pre.h;$(ProjectDir)..\..\..\..\..\..\AppData\Local\Temp\VMBuilds\Controller-Code\teensy2\Debug\.vmintelli\0d4f6b0a2250a0b7c901ce28c9015dab\vm-intelli-gcc-defines.h;d:\program files\microsoft visual studio\2022\enterprise\common7\ide\extensions\k5efmrr3.kil\Micro Platforms\default\vm-intelli-post.h;$(ProjectDir)__vm\.Controller-Code.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles>$(ProjectDir)..\..\..\..\..\..\..\program files\microsoft visual studio\2022\enterprise\common7\ide\extensions\50fqdxjx.0wj\Micro Platforms\default\vm-intelli-pre.h;C:\Users\kris7\AppData\Local\Temp\VMBuilds\Controller-Code\teensy2\Debug\.vmintelli\4c870298f659123656f420e44d8c2088\vm-intelli-gcc-defines.h;$(ProjectDir)..\..\..\..\..\..\..\program files\microsoft visual studio\2022\enterprise\common7\ide\extensions\50fqdxjx.0wj\Micro Platforms\default\vm-intelli-post.h;$(ProjectDir)__vm\.Controller-Code.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <UndefineAllPreprocessorDefinitions>true</UndefineAllPreprocessorDefinitions>
       <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
       <PreprocessorDefinitions>_VMICRO_INTELLISENSE;__TEENSY_atmega32u4__;__TEENSY_ATmega32U4__;__TEENSY_ATmega32u4__;_VMDEBUG=1;TEENSYDUINO=158;ARDUINO_ARCH_AVR;ARDUINO=108010;ARDUINO_TEENSY2;F_CPU=16000000L;USB_HID;LAYOUT_US_ENGLISH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
